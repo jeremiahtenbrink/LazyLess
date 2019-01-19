@@ -1,76 +1,114 @@
+#Less Animate.css
+A big thanks goes out to Animate.css for the start of all of these animations. 
+
 # Animate.css [![GitHub release](https://img.shields.io/github/release/daneden/animate.css.svg)](https://github.com/daneden/animate.css/releases) [![CDNJS](https://img.shields.io/cdnjs/v/animate.css.svg)](https://cdnjs.com/libraries/animate.css) [![Build Status](https://travis-ci.com/daneden/animate.css.svg?branch=master)](https://travis-ci.com/daneden/animate.css) [![devDependencies Status](https://david-dm.org/daneden/animate.css/dev-status.svg)](https://david-dm.org/daneden/animate.css?type=dev) [![chat](https://img.shields.io/badge/chat-gitter-green.svg)](https://gitter.im/animate-css/Lobby) [![npm version](https://badge.fury.io/js/animate.css.svg)](https://www.npmjs.com/package/animate.css)
 
-_Just-add-water CSS animation_
-
-`animate.css` is a bunch of cool, fun, and cross-browser animations for you to use in your projects. Great for emphasis, home pages, sliders, and general just-add-water-awesomeness.
-
-
-## Installation
-
-Install via npm:
-
-```bash
-$ npm install animate.css --save
-```
-
-or yarn:
-
-```bash
-$ yarn add animate.css
-```
-
+Less-imate is a less wrapper around the Animate.css library. Providing lazy loading and other tools from less to the animate.css library. Just include less-animate.less into your project and copy over all the source files.
 
 ## Usage
 
-To use animate.css in your website, simply drop the stylesheet into your document's `<head>`, and add the class `animated` to an element, along with any of the animation names. That's it! You've got a CSS animated element. Super!
+To use Less-imate in your project. Simply add a import for less-animate.less into your less files and when the less compiler compiles the css it will only load the required keyframs and mixins that you are using. All the other will not be included keeping your css files slim while still providing lots of functionality. 
 
-```html
-<head>
-  <link rel="stylesheet" href="animate.min.css">
-</head>
+```css  
+@import 'less-animate.less';
 ```
+I have seperated the mixins into 3 main catagories for so its easy to find the animation you are looking for via intellisense. 
 
-or use a CDN hosted version by [CDNJS](https://cdnjs.com/libraries/animate.css)
+.entrance-ANIMATION-NAME 
+.exit-ANIMATION-NAME
+.attention-ANIMATION-NAME
 
-```html
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-</head>
-```
+# Animations currently available
+
+.attention-bounce
+.attention-flash
+.attention-head-shake
+.attention-hear-beat
+.attention-jello
+.attention-pulse
+.attention-rubber-band
+.attention-shake
+.attention-swing
+.attention-tada
+.attention-wobble
+.attention-flip
+
+.entrance-bounceIn
+.entrance-bounceInDown
+.entrance-bounceInLeft
+.entrance-bounceInRight
+.entrance-bounceInUp
+.entrance-fadeInLeft
+.entrance-fadeInLeftBig
+.entrance-fadeIn
+.entrance-fadeInDown
+.entrance-fadeInDownBig
+.entrance-fadeInRight
+.entrance-fadeInRightBig
+.entrance-fadeInUp
+.entrance-fadeInUpBig
+.entrance-flipInX
+.entrance-flipInY
+.entrance-lightSpeedIn
+.entrance-rotateIn
+.entrance-rotateInDownLeft
+.entrance-rotateInDownRight
+.entrance-rotateInUpLeft
+.entrance-rotateInUpRight
+.entrance-slideInDown
+.entrance-slideInLeft
+.entrance-slideInRight
+.entrance-slideInUp
+.entrance-jackInTheBox
+.entrance-rollIn
+.entrance-zoomIn
+.entrance-zoomInDown
+.entrance-zoomInLeft
+.entrance-zoomInRight
+.entrance-zoomInUp
 
 
-### Animations
+.exit-bounceOut
+.exit-bounceOutDown
+.exit-bounceOutLeft
+.exit-bounceOutRight
+.exit-bounceOutUp
+.exit-fadeOut
+.exit-fadeOutDown
+.exit-fadeOutDownBig
+.exit-fadeOutLeft
+.exit-fadeOutLeftBig
+.exit-fadeOutRight
+.exit-fadeOutRightBig
+.exit-fadeOutUp
+.exit-fadeOutUpBig
+.exit-flipOutX
+.exit-flipOutY
+.exit-lightSpeedOut
+.exit-rotateOut
+.exit-rotateOutDownLeft
+.exit-rotateOutDownRight
+.exit-rotateOutOutUpLeft
+.exit-rotateOutUpRight
+.exit-rotateOutUpRight
+.exit-slideOutDown
+.exit-slideOutLeft
+.exit-slideOutRight
+.exit-slideOutUp
+.exit-hinge
+.exit-rollOut
+.exit-zoomOut
+.exit-zoomOutDown
+.exit-zoomOut
+.exit-zoomOutLeft
+.exit-zoomOutRight
+.exit-zoomOutUp
 
-To animate an element, add the class `animated` to an element. You can include the class `infinite` for an infinite loop. Finally you need to add one of the following classes to the element:
 
-| Class Name        |                    |                     |                      |
-| ----------------- | ------------------ | ------------------- | -------------------- |
-| `bounce`          | `flash`            | `pulse`             | `rubberBand`         |
-| `shake`           | `headShake`        | `swing`             | `tada`               |
-| `wobble`          | `jello`            | `bounceIn`          | `bounceInDown`       |
-| `bounceInLeft`    | `bounceInRight`    | `bounceInUp`        | `bounceOut`          |
-| `bounceOutDown`   | `bounceOutLeft`    | `bounceOutRight`    | `bounceOutUp`        |
-| `fadeIn`          | `fadeInDown`       | `fadeInDownBig`     | `fadeInLeft`         |
-| `fadeInLeftBig`   | `fadeInRight`      | `fadeInRightBig`    | `fadeInUp`           |
-| `fadeInUpBig`     | `fadeOut`          | `fadeOutDown`       | `fadeOutDownBig`     |
-| `fadeOutLeft`     | `fadeOutLeftBig`   | `fadeOutRight`      | `fadeOutRightBig`    |
-| `fadeOutUp`       | `fadeOutUpBig`     | `flipInX`           | `flipInY`            |
-| `flipOutX`        | `flipOutY`         | `lightSpeedIn`      | `lightSpeedOut`      |
-| `rotateIn`        | `rotateInDownLeft` | `rotateInDownRight` | `rotateInUpLeft`     |
-| `rotateInUpRight` | `rotateOut`        | `rotateOutDownLeft` | `rotateOutDownRight` |
-| `rotateOutUpLeft` | `rotateOutUpRight` | `hinge`             | `jackInTheBox`       |
-| `rollIn`          | `rollOut`          | `zoomIn`            | `zoomInDown`         |
-| `zoomInLeft`      | `zoomInRight`      | `zoomInUp`          | `zoomOut`            |
-| `zoomOutDown`     | `zoomOutLeft`      | `zoomOutRight`      | `zoomOutUp`          |
-| `slideInDown`     | `slideInLeft`      | `slideInRight`      | `slideInUp`          |
-| `slideOutDown`    | `slideOutLeft`     | `slideOutRight`     | `slideOutUp`         |
-| `heartBeat`       |
 
-Full example:
 
-```html
-<h1 class="animated infinite bounce delay-2s">Example</h1>
-```
+
+
 
 [Check out all the animations here!](https://daneden.github.io/animate.css/)
 
