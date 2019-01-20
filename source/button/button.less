@@ -1,0 +1,37 @@
+
+
+
+.button-mixin (@color: black, @bg-color: @button-success, @border-radius: @button-border-radius) {
+  color: @color;
+  font-size: @button-border-radius;
+  padding: 1.2rem 5rem;
+  border-radius: 18px;
+  background-color: @bg-color;
+  border: none;
+}
+
+
+.button-scaleOutOnHover (@bg-color: @button-success, @border-radius: @button-border-radius) {
+
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 90%;
+    width: 90%;
+    border-radius: @button-border-radius;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: all .7s;
+    background-color: @bg-color;
+    transform: translateX(-50%) translateY(-50%);
+
+  }
+
+  &:hover::after {
+    transform: translateX(-50%) translateY(-50%) scaleX(2) scaleY(2);
+    opacity: 0;
+  }
+}

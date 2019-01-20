@@ -2,12 +2,14 @@
 @import "source/attention_seekers/attentionSeekers";
 @import "source/bouncing_entrances/bounce-enterances";
 @import "source/bouncing_exits/bouncing-exits";
+@import "source/button/button";
 @import "source/fading_entrances/fading-entrances";
 @import "source/fading_exits/fading-exits";
 @import "source/flippers/flippers";
 @import "source/lightspeed/lightspeed";
 @import "source/rotating_entrances/rotating-entrances";
 @import "source/rotating_exits/rotating-exits";
+@import "source/shadow_animations/shadow_animations";
 @import "source/sliding_entrances/sliding-entrances";
 @import "source/sliding_exits/sliding-exits";
 @import "source/specials/specials";
@@ -25,6 +27,16 @@
 }
 
 .test-button {
-  .entrance-bounceInLeft();
+
+  margin-top: 50px;
+  .button-mixin(white, @button-info);
+  .aesthetic-shadow-inset-center(black, .7);
+  .aesthetic-box-shadow(black);
+  .button-scaleOutOnHover(@button-info);
+  transition: all .2s;
+
+  &:hover {
+    .aesthetic-shadow-inset-right(red);
+  }
 }
 

@@ -36,107 +36,136 @@ Then in your css use the animations by calling the mixins.
   
 }
 ```
-I have included these helper mixins to allow customizing of animation easy. 
+I have separated the mixins into 4 main categories so its easy to find the animation you are looking for via intellisense. 
+
+.entrance-MIXIN-NAME
+.exit-MIXIN-NAME
+.attention-MIXIN-NAME
+.aesthetic-MIXIN-NAME
+.button-MIXIN-NAME
+
+# Mixins currently available
+
+## Button Mixins
+* .button-mixni (@color: black, @bg-color: @button-success, @border-radius: @button-border-radius)
+* .button-scaleOutOnHover (@bg-color: @button-success, @border-radius: @button-border-radius)
+
+## Aesthetic Mixins
+* .aesthetic-shadow-inset-center (@color: black, @blur: 32px, @width: 9px, @opacity: .5, @x-offset: 0, @y-offset: 0) 
+* .aesthetic-shadow-inset-top (@color: black, @blur: 14px, @width: -3px, @opacity: .5, @x-offset: 0, @y-offset: 6px) 
+* .aesthetic-shadow-inset-right (@color: black, @blur: 14px, @width: -3px, @opacity: .5, @x-offset: -6px, @y-offset: 0)
+* .aesthetic-shadow-inset-bottom (@color: black, @blur: 14px, @width: -3px, @opacity: .5, @x-offset: 0, @y-offset: -6px)
+* .aesthetic-shadow-inset-left (@color: black, @blur: 14px, @width: -3px, @opacity: .5, @x-offset: 6px, @y-offset: 0 )
+* .aesthetic-shadow-inset-left-right (@color: black, @blur: 14px, @width: -3px, @opacity: .5, @x-offset: -6px, @y-offset: 0 )
+* .aesthetic-shadow-inset-top-bottom (@color: black, @blur: 14px, @width: -3px, @opacity: .5, @x-offset: 0, @y-offset: -6px ) 
+* .aesthetic-box-shadow (@color: black, @blur: 20px, @width: 2px,  @opacity: .5, @x-offset: @default-box-shadow-offsetX, @y-offset: @default-box-shadow-offsetY) 
+
+## Attention Mixins 
+* .attention-bounce (@duration: @defaultDuration)
+* .attention-flash (@duration: @defaultDuration)
+* .attention-head-shake (@duration: @defaultDuration)
+* .attention-hear-beat (@duration: @defaultDuration)
+* .attention-jello (@duration: @defaultDuration)
+* .attention-pulse (@duration: @defaultDuration)
+* .attention-rubber-band (@duration: @defaultDuration)
+* .attention-shake (@duration: @defaultDuration)
+* .attention-swing (@duration: @defaultDuration)
+* .attention-tada (@duration: @defaultDuration)
+* .attention-wobble (@duration: @defaultDuration)
+* .attention-flip (@duration: @defaultDuration)
+
+## Entrance Mixins
+* .entrance-bounceIn (@duration: @defaultDuration)
+* .entrance-bounceInDown (@duration: @defaultDuration)
+* .entrance-bounceInLeft (@duration: @defaultDuration)
+* .entrance-bounceInRight (@duration: @defaultDuration)
+* .entrance-bounceInUp (@duration: @defaultDuration)
+* .entrance-fadeInLeft (@duration: @defaultDuration)
+* .entrance-fadeInLeftBig (@duration: @defaultDuration)
+* .entrance-fadeIn (@duration: @defaultDuration)
+* .entrance-fadeInDown (@duration: @defaultDuration)
+* .entrance-fadeInDownBig (@duration: @defaultDuration)
+* .entrance-fadeInRight (@duration: @defaultDuration)
+* .entrance-fadeInRightBig (@duration: @defaultDuration)
+* .entrance-fadeInUp (@duration: @defaultDuration)
+* .entrance-fadeInUpBig (@duration: @defaultDuration)
+* .entrance-flipInX (@duration: @defaultDuration)
+* .entrance-flipInY (@duration: @defaultDuration)
+* .entrance-lightSpeedIn (@duration: @defaultDuration)
+* .entrance-rotateIn (@duration: @defaultDuration)
+* .entrance-rotateInDownLeft (@duration: @defaultDuration)
+* .entrance-rotateInDownRight (@duration: @defaultDuration)
+* .entrance-rotateInUpLeft (@duration: @defaultDuration)
+* .entrance-rotateInUpRight (@duration: @defaultDuration)
+* .entrance-slideInDown (@duration: @defaultDuration)
+* .entrance-slideInLeft (@duration: @defaultDuration)
+* .entrance-slideInRight (@duration: @defaultDuration)
+* .entrance-slideInUp (@duration: @defaultDuration)
+* .entrance-jackInTheBox (@duration: @defaultDuration)
+* .entrance-rollIn (@duration: @defaultDuration)
+* .entrance-zoomIn (@duration: @defaultDuration)
+* .entrance-zoomInDown (@duration: @defaultDuration)
+* .entrance-zoomInLeft (@duration: @defaultDuration)
+* .entrance-zoomInRight (@duration: @defaultDuration)
+* .entrance-zoomInUp (@duration: @defaultDuration)
+
+
+## Exit Mixins
+* .exit-bounceOut (@duration: @defaultDuration)
+* .exit-bounceOutDown (@duration: @defaultDuration)
+* .exit-bounceOutLeft (@duration: @defaultDuration)
+* .exit-bounceOutRight (@duration: @defaultDuration)
+* .exit-bounceOutUp (@duration: @defaultDuration)
+* .exit-fadeOut (@duration: @defaultDuration)
+* .exit-fadeOutDown (@duration: @defaultDuration)
+* .exit-fadeOutDownBig (@duration: @defaultDuration)
+* .exit-fadeOutLeft (@duration: @defaultDuration)
+* .exit-fadeOutLeftBig (@duration: @defaultDuration)
+* .exit-fadeOutRight (@duration: @defaultDuration)
+* .exit-fadeOutRightBig (@duration: @defaultDuration)
+* .exit-fadeOutUp (@duration: @defaultDuration)
+* .exit-fadeOutUpBig (@duration: @defaultDuration)
+* .exit-flipOutX (@duration: @defaultDuration)
+* .exit-flipOutY (@duration: @defaultDuration)
+* .exit-lightSpeedOut (@duration: @defaultDuration)
+* .exit-rotateOut (@duration: @defaultDuration)
+* .exit-rotateOutDownLeft (@duration: @defaultDuration)
+* .exit-rotateOutDownRight (@duration: @defaultDuration)
+* .exit-rotateOutOutUpLeft (@duration: @defaultDuration)
+* .exit-rotateOutUpRight (@duration: @defaultDuration)
+* .exit-rotateOutUpRight (@duration: @defaultDuration)
+* .exit-slideOutDown (@duration: @defaultDuration)
+* .exit-slideOutLeft (@duration: @defaultDuration)
+* .exit-slideOutRight (@duration: @defaultDuration)
+* .exit-slideOutUp (@duration: @defaultDuration)
+* .exit-hinge (@duration: @defaultDuration)
+* .exit-rollOut (@duration: @defaultDuration)
+* .exit-zoomOut (@duration: @defaultDuration)
+* .exit-zoomOutDown (@duration: @defaultDuration)
+* .exit-zoomOut (@duration: @defaultDuration)
+* .exit-zoomOutLeft (@duration: @defaultDuration)
+* .exit-zoomOutRight (@duration: @defaultDuration)
+* .exit-zoomOutUp (@duration: @defaultDuration)
+
+## Documentation. 
+
+## Default Variables
+All default variables are located in base.less in the source folder. They can be overridden in your less files as long as 
+your less files come after the @import 'less-animate.less'; 
+### @defaultDuration: 1s;
+### @default-box-shadow-offsetX: 0;
+### @default-box-shadow-offsetY: 0;
+### @button-success: lightgreen;   Light green color.
+### @button-danger: #f59090;  Light red color.
+### @button-info: #537ee8;   Light blue color.
+
 ### .animation-infinite ();
-This sets the animation to run continuously.
+#### This sets the animation to run continuously.
 
 ### .animation-delay(@duration : 1s);
-This mixin will take one argument the delay duration. Either in s or ms. Must include
-the s or the ms after the number. Or leave blank for the default 1s delay. 
-
-I have seperated the mixins into 3 main catagories for so its easy to find the animation you are looking for via intellisense. 
-
-.entrance-ANIMATION-NAME 
-.exit-ANIMATION-NAME
-.attention-ANIMATION-NAME
-
-# Animations currently available
-
-## Attention Animation 
-* .attention-bounce
-* .attention-flash
-* .attention-head-shake
-* .attention-hear-beat
-* .attention-jello
-* .attention-pulse
-* .attention-rubber-band
-* .attention-shake
-* .attention-swing
-* .attention-tada
-* .attention-wobble
-* .attention-flip
-
-## Entrance Animations
-* .entrance-bounceIn
-* .entrance-bounceInDown
-* .entrance-bounceInLeft
-* .entrance-bounceInRight
-* .entrance-bounceInUp
-* .entrance-fadeInLeft
-* .entrance-fadeInLeftBig
-* .entrance-fadeIn
-* .entrance-fadeInDown
-* .entrance-fadeInDownBig
-* .entrance-fadeInRight
-* .entrance-fadeInRightBig
-* .entrance-fadeInUp
-* .entrance-fadeInUpBig
-* .entrance-flipInX
-* .entrance-flipInY
-* .entrance-lightSpeedIn
-* .entrance-rotateIn
-* .entrance-rotateInDownLeft
-* .entrance-rotateInDownRight
-* .entrance-rotateInUpLeft
-* .entrance-rotateInUpRight
-* .entrance-slideInDown
-* .entrance-slideInLeft
-* .entrance-slideInRight
-* .entrance-slideInUp
-* .entrance-jackInTheBox
-* .entrance-rollIn
-* .entrance-zoomIn
-* .entrance-zoomInDown
-* .entrance-zoomInLeft
-* .entrance-zoomInRight
-* .entrance-zoomInUp
+#### This mixin will take one argument the delay duration. Either in s or ms. Must include the s or the ms after the number. Or leave blank for the default 1s delay. 
 
 
-## Exit Animations
-* .exit-bounceOut
-* .exit-bounceOutDown
-* .exit-bounceOutLeft
-* .exit-bounceOutRight
-* .exit-bounceOutUp
-* .exit-fadeOut
-* .exit-fadeOutDown
-* .exit-fadeOutDownBig
-* .exit-fadeOutLeft
-* .exit-fadeOutLeftBig
-* .exit-fadeOutRight
-* .exit-fadeOutRightBig
-* .exit-fadeOutUp
-* .exit-fadeOutUpBig
-* .exit-flipOutX
-* .exit-flipOutY
-* .exit-lightSpeedOut
-* .exit-rotateOut
-* .exit-rotateOutDownLeft
-* .exit-rotateOutDownRight
-* .exit-rotateOutOutUpLeft
-* .exit-rotateOutUpRight
-* .exit-rotateOutUpRight
-* .exit-slideOutDown
-* .exit-slideOutLeft
-* .exit-slideOutRight
-* .exit-slideOutUp
-* .exit-hinge
-* .exit-rollOut
-* .exit-zoomOut
-* .exit-zoomOutDown
-* .exit-zoomOut
-* .exit-zoomOutLeft
-* .exit-zoomOutRight
-* .exit-zoomOutUp
+
 
 
