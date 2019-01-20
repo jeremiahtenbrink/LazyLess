@@ -1,5 +1,5 @@
 # Lazy Animations
-A big thanks goes out to Animate.css for the start of all of these animations. 
+A big thank you goes out to [Animate.css](https://github.com/daneden/animate.css "Animate.css Github") for the start of all of these animations. 
 
 
 Lazy Animationsis a less wrapper around the Animate.css library. Providing lazy loading and other tools from less to the animate.css library. Just include less-animate.less into your project and copy over all the source files.
