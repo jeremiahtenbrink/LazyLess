@@ -19,87 +19,88 @@ I have seperated the mixins into 3 main catagories for so its easy to find the a
 
 # Animations currently available
 
-.attention-bounce
-.attention-flash
-.attention-head-shake
-.attention-hear-beat
-.attention-jello
-.attention-pulse
-.attention-rubber-band
-.attention-shake
-.attention-swing
-.attention-tada
-.attention-wobble
-.attention-flip
+* .attention-bounce
+* .attention-flash
+* .attention-head-shake
+* .attention-hear-beat
+* .attention-jello
+* .attention-pulse
+* .attention-rubber-band
+* .attention-shake
+* .attention-swing
+* .attention-tada
+* .attention-wobble
+* .attention-flip
 
-.entrance-bounceIn
-.entrance-bounceInDown
-.entrance-bounceInLeft
-.entrance-bounceInRight
-.entrance-bounceInUp
-.entrance-fadeInLeft
-.entrance-fadeInLeftBig
-.entrance-fadeIn
-.entrance-fadeInDown
-.entrance-fadeInDownBig
-.entrance-fadeInRight
-.entrance-fadeInRightBig
-.entrance-fadeInUp
-.entrance-fadeInUpBig
-.entrance-flipInX
-.entrance-flipInY
-.entrance-lightSpeedIn
-.entrance-rotateIn
-.entrance-rotateInDownLeft
-.entrance-rotateInDownRight
-.entrance-rotateInUpLeft
-.entrance-rotateInUpRight
-.entrance-slideInDown
-.entrance-slideInLeft
-.entrance-slideInRight
-.entrance-slideInUp
-.entrance-jackInTheBox
-.entrance-rollIn
-.entrance-zoomIn
-.entrance-zoomInDown
-.entrance-zoomInLeft
-.entrance-zoomInRight
-.entrance-zoomInUp
+* .entrance-bounceIn
+* .entrance-bounceInDown
+* .entrance-bounceInLeft
+* .entrance-bounceInRight
+* .entrance-bounceInUp
+* .entrance-fadeInLeft
+* .entrance-fadeInLeftBig
+* .entrance-fadeIn
+* .entrance-fadeInDown
+* .entrance-fadeInDownBig
+* .entrance-fadeInRight
+* .entrance-fadeInRightBig
+* .entrance-fadeInUp
+* .entrance-fadeInUpBig
+* .entrance-flipInX
+* .entrance-flipInY
+* .entrance-lightSpeedIn
+* .entrance-rotateIn
+* .entrance-rotateInDownLeft
+* .entrance-rotateInDownRight
+* .entrance-rotateInUpLeft
+* .entrance-rotateInUpRight
+* .entrance-slideInDown
+* .entrance-slideInLeft
+* .entrance-slideInRight
+* .entrance-slideInUp
+* .entrance-jackInTheBox
+* .entrance-rollIn
+* .entrance-zoomIn
+* .entrance-zoomInDown
+* .entrance-zoomInLeft
+* .entrance-zoomInRight
+* .entrance-zoomInUp
 
 
-.exit-bounceOut
-.exit-bounceOutDown
-.exit-bounceOutLeft
-.exit-bounceOutRight
-.exit-bounceOutUp
-.exit-fadeOut
-.exit-fadeOutDown
-.exit-fadeOutDownBig
-.exit-fadeOutLeft
-.exit-fadeOutLeftBig
-.exit-fadeOutRight
-.exit-fadeOutRightBig
-.exit-fadeOutUp
-.exit-fadeOutUpBig
-.exit-flipOutX
-.exit-flipOutY
-.exit-lightSpeedOut
-.exit-rotateOut
-.exit-rotateOutDownLeft
-.exit-rotateOutDownRight
-.exit-rotateOutOutUpLeft
-.exit-rotateOutUpRight
-.exit-rotateOutUpRight
-.exit-slideOutDown
-.exit-slideOutLeft
-.exit-slideOutRight
-.exit-slideOutUp
-.exit-hinge
-.exit-rollOut
-.exit-zoomOut
-.exit-zoomOutDown
-.exit-zoomOut
-.exit-zoomOutLeft
-.exit-zoomOutRight
-.exit-zoomOutUp
+* .exit-bounceOut
+* .exit-bounceOutDown
+* .exit-bounceOutLeft
+* .exit-bounceOutRight
+* .exit-bounceOutUp
+* .exit-fadeOut
+* .exit-fadeOutDown
+* .exit-fadeOutDownBig
+* .exit-fadeOutLeft
+* .exit-fadeOutLeftBig
+* .exit-fadeOutRight
+* .exit-fadeOutRightBig
+* .exit-fadeOutUp
+* .exit-fadeOutUpBig
+* .exit-flipOutX
+* .exit-flipOutY
+* .exit-lightSpeedOut
+* .exit-rotateOut
+* .exit-rotateOutDownLeft
+* .exit-rotateOutDownRight
+* .exit-rotateOutOutUpLeft
+* .exit-rotateOutUpRight
+* .exit-rotateOutUpRight
+* .exit-slideOutDown
+* .exit-slideOutLeft
+* .exit-slideOutRight
+* .exit-slideOutUp
+* .exit-hinge
+* .exit-rollOut
+* .exit-zoomOut
+* .exit-zoomOutDown
+* .exit-zoomOut
+* .exit-zoomOutLeft
+* .exit-zoomOutRight
+* .exit-zoomOutUp
+
 
