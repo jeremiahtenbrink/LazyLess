@@ -11,6 +11,37 @@ To use Lazy Animations in your project. Simply add a import for less-animate.les
 ```css  
 @import 'less-animate.less';
 ```
+
+Then in your css use the animations by calling the mixins. 
+
+```$less
+.someClass{
+
+    /*make the animation infinite*/
+  .animation-infinite;
+  
+  /*delay the aniimation for x time*/
+  .animation-delay(.4s);
+  
+  /*call the animation and set a duration for the animation to take place*/
+  .attention-bounce(2s)
+  
+  /*set up animations on hover*/
+  &:hover {
+  
+    /*call animation with default duration*/
+    .exit-fadeOut();
+  }
+  
+  /*call animation on active pseudo class*/
+  :active {
+  
+    /*call animation with default duration*/
+    .attention-flash;
+  }
+  
+}
+```
 I have seperated the mixins into 3 main catagories for so its easy to find the animation you are looking for via intellisense. 
 
 .entrance-ANIMATION-NAME 

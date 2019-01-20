@@ -1,3 +1,4 @@
+@import "source/base";
 @import "source/attention_seekers/attentionSeekers";
 @import "source/bouncing_entrances/bounce-enterances";
 @import "source/bouncing_exits/bouncing-exits";
@@ -13,11 +14,7 @@
 @import "source/zooming_entrances/zooming_entrances";
 @import "source/zooming_exits/zooming_exits";
 
-@defaultDuration: 1s;
-.animation(@duration: 1s) {
-  animation-duration: @duration;
-  animation-fill-mode: both;
-}
+
 
 .test-container {
   width: 100%;
@@ -28,6 +25,8 @@
 }
 
 .test-button {
-  .exit-zoomOutDown();
+  .animation-infinite;
+  .animation-delay(5s);
+  .attention-bounce();
 }
 
