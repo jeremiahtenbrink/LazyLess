@@ -19,6 +19,7 @@ I have seperated the mixins into 3 main catagories for so its easy to find the a
 
 # Animations currently available
 
+1. Attention Animations. These draw attention to a element by moving it around. 
 * .attention-bounce
 * .attention-flash
 * .attention-head-shake
@@ -32,6 +33,7 @@ I have seperated the mixins into 3 main catagories for so its easy to find the a
 * .attention-wobble
 * .attention-flip
 
+2. Entrance Animations. These are used place animations on items when as they enter the page or upon some action. 
 * .entrance-bounceIn
 * .entrance-bounceInDown
 * .entrance-bounceInLeft
@@ -67,6 +69,7 @@ I have seperated the mixins into 3 main catagories for so its easy to find the a
 * .entrance-zoomInUp
 
 
+3. Exit Animations. These animations end in the object with opacity set to 0. Used to have the element leave the page. 
 * .exit-bounceOut
 * .exit-bounceOutDown
 * .exit-bounceOutLeft
