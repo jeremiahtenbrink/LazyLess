@@ -37,10 +37,10 @@ Then in your css use the animations by calling the mixins.
 }
 ```
 I have included these helper mixins to allow customizing of animation easy. 
-###.animation-infinite ();
+### .animation-infinite ();
 This sets the animation to run continuously.
 
-###.animation-delay(@duration : 1s);
+### .animation-delay(@duration : 1s);
 This mixin will take one argument the delay duration. Either in s or ms. Must include
 the s or the ms after the number. Or leave blank for the default 1s delay. 
 
