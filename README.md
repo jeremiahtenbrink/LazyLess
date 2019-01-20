@@ -6,7 +6,7 @@ Lazy Animationsis a less wrapper around the Animate.css library. Providing lazy 
 
 ## Usage
 
-To use Less-imate in your project. Simply add a import for less-animate.less into your less files and when the less compiler compiles the css it will only load the required keyframs and mixins that you are using. All the other will not be included keeping your css files slim while still providing lots of functionality. 
+To use Lazy Animations in your project. Simply add a import for less-animate.less into your less files and when the less compiler runs the compiler will only load the required keyframs and mixins that you are using. All the others will not be included keeping your css files slim while still providing lots of functionality. 
 
 ```css  
 @import 'less-animate.less';
