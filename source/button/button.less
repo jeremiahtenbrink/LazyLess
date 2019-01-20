@@ -1,10 +1,7 @@
-@button-success: lightgreen;
-@button-danger: #f59090;
-@button-info: #537ee8;
-@button-border-radius: 20px;
 
 
-.button (@color: black, @bg-color: @button-success, @border-radius: @button-border-radius) {
+
+.button-mixin (@color: black, @bg-color: @button-success, @border-radius: @button-border-radius) {
   color: @color;
   font-size: @button-border-radius;
   padding: 1.2rem 5rem;
