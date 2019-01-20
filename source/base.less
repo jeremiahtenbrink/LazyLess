@@ -12,3 +12,10 @@
 .animation-delay(@duration : 1s){
   animation-delay: @duration;
 }
+
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    animation: unset !important;
+    transition: none !important;
+  }
+}

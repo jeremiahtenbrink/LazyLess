@@ -18,26 +18,28 @@
       transform: scale3d(0.3, 0.3, 0.3);
     }
   }
+
 }
 
 
 .exit-bounceOutDown (@duration: @defaultDuration) {
   animation-name: bounceOutDown;
   .animation(@duration);
+
   @keyframes bounceOutDown {
     20% {
-      transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0) scaleY(0.985);
     }
 
     40%,
     45% {
       opacity: 1;
-      transform: translate3d(0, -20px, 0);
+      transform: translate3d(0, -20px, 0) scaleY(0.9);
     }
 
     to {
       opacity: 0;
-      transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0) scaleY(3);
     }
   }
 }
@@ -50,29 +52,31 @@
   @keyframes bounceOutLeft {
     20% {
       opacity: 1;
-      transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0) scaleX(0.9);
     }
 
     to {
       opacity: 0;
-      transform: translate3d(-2000px, 0, 0);
+      transform: translate3d(-2000px, 0, 0) scaleX(2);
     }
   }
+
 }
 
 
 .exit-bounceOutRight (@duration: @defaultDuration) {
   animation-name: bounceOutRight;
   .animation(@duration);
+
   @keyframes bounceOutRight {
     20% {
       opacity: 1;
-      transform: translate3d(-20px, 0, 0);
+      transform: translate3d(-20px, 0, 0) scaleX(0.9);
     }
 
     to {
       opacity: 0;
-      transform: translate3d(2000px, 0, 0);
+      transform: translate3d(2000px, 0, 0) scaleX(2);
     }
   }
 }
@@ -81,20 +85,21 @@
 .exit-bounceOutUp(@duration: @defaultDuration) {
   animation-name: bounceOutUp;
   .animation(@duration);
+
   @keyframes bounceOutUp {
     20% {
-      transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0) scaleY(0.985);
     }
 
     40%,
     45% {
       opacity: 1;
-      transform: translate3d(0, 20px, 0);
+      transform: translate3d(0, 20px, 0) scaleY(0.9);
     }
 
     to {
       opacity: 0;
-      transform: translate3d(0, -2000px, 0);
+      transform: translate3d(0, -2000px, 0) scaleY(3);
     }
   }
 }
