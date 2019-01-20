@@ -14,7 +14,7 @@ To use Lazy Animations in your project. Simply add a import for less-animate.les
 
 Then in your css use the animations by calling the mixins. 
 
-```$less
+```css
 .someClass{
 
     
