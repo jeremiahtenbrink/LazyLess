@@ -17,27 +17,21 @@ Then in your css use the animations by calling the mixins.
 ```$less
 .someClass{
 
-    /*make the animation infinite*/
-  .animation-infinite;
+    
+  .animation-infinite;    /*make the animation infinite*/
   
-  /*delay the aniimation for x time*/
-  .animation-delay(.4s);
+  .animation-delay(.4s);  /*delay the aniimation for x time*/
   
-  /*call the animation and set a duration for the animation to take place*/
-  .attention-bounce(2s)
+  .attention-bounce(2s);    /*call the animation and set a duration for the animation to take place*/
   
-  /*set up animations on hover*/
-  &:hover {
-  
-    /*call animation with default duration*/
-    .exit-fadeOut();
+  &:hover {   /*set up animations on hover*/
+    
+    .exit-fadeOut();   /*call animation with default duration*/
   }
   
-  /*call animation on active pseudo class*/
-  :active {
+  :active {   /*call animation on active pseudo class*/
   
-    /*call animation with default duration*/
-    .attention-flash;
+    .attention-flash;   /*call animation with default duration*/
   }
   
 }
