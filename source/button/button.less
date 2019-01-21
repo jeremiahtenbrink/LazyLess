@@ -1,12 +1,10 @@
 
 
 
-.button-mixin (@color: black, @bg-color: @button-success, @border-radius: @button-border-radius) {
-  color: @color;
+.button-mixin (@border-radius: @button-border-radius) {
   font-size: @button-border-radius;
   padding: 1.2rem 5rem;
   border-radius: 18px;
-  background-color: @bg-color;
   border: none;
 }
 
@@ -33,5 +31,13 @@
   &:hover::after {
     transform: translateX(-50%) translateY(-50%) scaleX(2) scaleY(2);
     opacity: 0;
+  }
+}
+
+.buttonPress(@color: black, @opacity: @default-box-shadow-opacity, @blur: @default-box-shadow-blur, @x: 0, @y: (@default-box-shadow-offsetY - 3px), @width: @default-box-shadow-width) {
+
+  &:active {
+    transform: translateY(3px);
+    .aesthetic-box-shadow (@color , @blur, @width,  @opacity, @x,  @y);
   }
 }

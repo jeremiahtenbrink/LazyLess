@@ -2,11 +2,11 @@
 A big thank you goes out to [Animate.css](https://github.com/daneden/animate.css "Animate.css Github") for the start of all of these animations. 
 Another thank you to [eltonmesquita](https://github.com/daneden/animate.css) for the updated keyframes.
 
-Lazy Animationsis a less wrapper around the Animate.css library. Providing lazy loading and other tools from less to the animate.css library. Just include less-animate.less into your project and copy over all the source files.
+Lazy CSS Mixins a less wrapper around the Animate.css library. Providing lazy loading and other tools from less to the animate.css library. Just include less-animate.less into your project and copy over all the source files.
 
 ## Usage
 
-To use Lazy Animations in your project. Simply add a import for less-animate.less into your less files and when the less compiler runs the compiler will only load the required keyframs and mixins that you are using. All the others will not be included keeping your css files slim while still providing lots of functionality. 
+To use Lazy CSS Mixins in your project. Simply add a import for less-animate.less into your less files and when the less compiler runs the compiler will only load the required keyframs and mixins that you are using. All the others will not be included keeping your css files slim while still providing lots of functionality. 
 
 ```css  
 @import 'less-animate.less';
@@ -36,19 +36,44 @@ Then in your css use the animations by calling the mixins.
   
 }
 ```
-I have separated the mixins into 4 main categories so its easy to find the animation you are looking for via intellisense. 
+I have separated the mixins into 6 main categories so its easy to find the animation you are looking for via intellisense. 
 
 .entrance-MIXIN-NAME
 .exit-MIXIN-NAME
 .attention-MIXIN-NAME
 .aesthetic-MIXIN-NAME
 .button-MIXIN-NAME
+.background-MIXIN-NAME
 
 # Mixins currently available
+
+## Background Mixins
+* .background-radial-gradient-darken-on-hover ( @colorInside, @colorOutside, @fontColor: inherit,@percentBrighten: 25%, @location: closest-corner, @x: 50%,
+   @y: 50%, @color1InsidePercent: 0, @colorOutsidePercent: 100%)
+* .background-radial-gradient-brighten-on-hover ( @colorInside, @colorOutside, @percentBrighten: 25%, @location: closest-corner, @x: 50%,
+    @y: 50%, @color1InsidePercent: 0, @colorOutsidePercent: 100%)
+* .background-radial-gradient (@colorInside, @colorOutside, @location: closest-corner, @x: 50%, @y: 50%, @color1InsidePercent: 0, @colorOutsidePercent: 100%)
+* .background-linear-gradient-darken-on-hover (@color1, @color2, @darkenPercentage: 25%)
+* .background-linear-gradient-glow-on-hover (@color1, @color2, @glowPercentage: 25%)
+* .background-linear-gradient(@color1, @color2)
+* .background-darken-on-hover(@bg-color, @percent-darken: 25%)
+* .background-glow-on-hover(@bg-color, @percent-brighten: 25%)
+* .background-color-change-5-colors (@color1, @color2, @color3, @color4, @color5, @duration: 8s)
+* .background-color-change-4-colors (@color1, @color2, @color3, @color4, @duration: 6s)
+* .background-color-change-3-colors (@color1, @color2, @color3, @duration: 4s)
+* .background-color-change-2-colors (@color1, @color2, @duration: 2s)
+* .background-pan-top-left(@duration: 8s)
+* .background-pan-bottom-left(@duration: 8s)
+* .background-pan-bottom-right (@duration: 8s)
+* .background-pan-top-right (@duration: 8s)
+* .background-pan-bottom-to-top (@duration: 8s)
+* .background-pan-right (@duration: 8s)
+* .background-pan-left(@duration: 8s)
 
 ## Button Mixins
 * .button-mixni (@color: black, @bg-color: @button-success, @border-radius: @button-border-radius)
 * .button-scaleOutOnHover (@bg-color: @button-success, @border-radius: @button-border-radius)
+* .buttonPress(@color: black, @opacity: @default-box-shadow-opacity, @blur: @default-box-shadow-blur, @x: 0, @y: (@default-box-shadow-offsetY - 3px), @width: @default-box-shadow-width)
 
 ## Aesthetic Mixins
 * .aesthetic-shadow-inset-center (@color: black, @blur: 32px, @width: 9px, @opacity: .5, @x-offset: 0, @y-offset: 0) 
@@ -160,10 +185,10 @@ your less files come after the @import 'less-animate.less';
 ### @button-info: #537ee8;   Light blue color.
 
 ### .animation-infinite ();
-#### This sets the animation to run continuously.
+  #### This sets the animation to run continuously.
 
 ### .animation-delay(@duration : 1s);
-#### This mixin will take one argument the delay duration. Either in s or ms. Must include the s or the ms after the number. Or leave blank for the default 1s delay. 
+  #### This mixin will take one argument the delay duration. Either in s or ms. Must include the s or the ms after the number. Or leave blank for the default 1s delay. 
 
 
 
