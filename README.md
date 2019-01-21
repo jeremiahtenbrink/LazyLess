@@ -38,12 +38,12 @@ Then in your css use the animations by calling the mixins.
 ```
 I have separated the mixins into 6 main categories so its easy to find the animation you are looking for via intellisense. 
 
-.entrance-MIXIN-NAME
-.exit-MIXIN-NAME
-.attention-MIXIN-NAME
-.aesthetic-MIXIN-NAME
-.button-MIXIN-NAME
-.background-MIXIN-NAME
+#### .entrance-MIXIN-NAME
+#### .exit-MIXIN-NAME
+#### .attention-MIXIN-NAME
+#### .aesthetic-MIXIN-NAME
+#### .button-MIXIN-NAME
+#### .background-MIXIN-NAME
 
 # Mixins currently available
 
