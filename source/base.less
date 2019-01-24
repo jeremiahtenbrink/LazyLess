@@ -1,3 +1,6 @@
+
+@color: #74b49b; // You may also use RGB Colors
+
 @defaultDuration: 1s;
 @default-box-shadow-offsetX: 0;
 @default-box-shadow-offsetY: 0;
@@ -18,6 +21,10 @@
 
 .animation-infinite () {
   animation-iteration-count: infinite;
+}
+
+.animation-count (@count: 3) {
+  animation-iteration-count: @count;
 }
 
 .animation-delay(@duration : 1s){

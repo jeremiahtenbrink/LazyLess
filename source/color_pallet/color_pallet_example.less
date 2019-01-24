@@ -1,0 +1,394 @@
+.color_pallet {
+  margin: 1rem;
+
+  background-color: #556270;
+  color: #fff;
+
+  & .mono{
+    display: flex;
+    justify-content: stretch;
+    font-size: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .4);
+    margin: 1rem 0;
+
+    > div {
+      flex-grow: 1;
+      display: inline-block;
+      padding: 1rem 0;
+
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+
+}
+
+
+
+h2 {
+  text-align: center;
+}
+
+
+.primary-1 {
+  background-color: @primary1;
+  color: contrast(@color, #333, #fff, 60%);
+
+}
+
+.primary-2 {
+  background-color: @primary2;
+  color: contrast(lighten(@color, 15%), #333, #fff, 60%);
+}
+
+.primary-3 {
+  background-color: @primary3;
+  color: contrast(lighten(@color, 25%), #333, #fff, 60%);
+}
+
+.primary-4 {
+  background-color: @primary4;
+  color: contrast(darken(@color, 15%), #333, #fff, 60%);
+}
+
+.primary-5 {
+  background-color: @primary5;
+  color: contrast(darken(@color, 25%), #333, #fff, 60%);
+}
+
+.mix1 {
+  background-color: @mix1;
+  color: contrast(@color, #333, #fff, 60%);
+}
+.mix2 {
+  background-color: @mix2;
+  color: contrast(@color, #333, #fff, 60%);
+}
+.mix3 {
+  background-color: @mix3;
+  color: contrast(@color, #333, #fff, 60%);
+}
+.mix4 {
+  background-color: @mix4;
+  color: contrast(@color, #333, #fff, 60%);
+}
+.mix5 {
+  background-color: @mix5;
+  color: contrast(@color, #333, #fff, 60%);
+}
+.mix6 {
+   background-color: @mix6;
+   color: contrast(@color, #333, #fff, 60%);
+ }
+.mix7 {
+  background-color: @mix7;
+  color: contrast(@color, #333, #fff, 60%);
+}
+
+.primary-1Saturate {
+  background-color: @primary1Saturate;
+  color: contrast(@color, #333, #fff, 60%);
+  
+}
+
+.primary-2Saturate {
+  background-color: @primary2Saturate;
+  color: contrast(lighten(@color, 15%), #333, #fff, 60%);
+}
+
+.primary-3Saturate {
+  background-color: @primary3Saturate;
+  color: contrast(lighten(@color, 25%), #333, #fff, 60%);
+}
+
+.primary-4Saturate {
+  background-color: @primary4Saturate;
+  color: contrast(darken(@color, 15%), #333, #fff, 60%);
+}
+
+.primary-5Saturate {
+  background-color: @primary5Saturate;
+  color: contrast(darken(@color, 25%), #333, #fff, 60%);
+}
+
+.primary-1deSaturate {
+  background-color: @primary1deSaturate;
+  color: contrast(@color, #333, #fff, 60%);
+  
+}
+
+.primary-2deSaturate {
+  background-color: @primary2deSaturate;
+  color: contrast(lighten(@color, 15%), #333, #fff, 60%);
+}
+
+.primary-3deSaturate {
+  background-color: @primary3deSaturate;
+  color: contrast(lighten(@color, 25%), #333, #fff, 60%);
+}
+
+.primary-4deSaturate {
+  background-color: @primary4deSaturate;
+  color: contrast(darken(@color, 15%), #333, #fff, 60%);
+}
+
+.primary-5deSaturate {
+  background-color: @primary5deSaturate;
+  color: contrast(darken(@color, 25%), #333, #fff, 60%);
+}
+
+
+.complement-1 {
+  background-color: @complement1;
+  color: contrast(spin(@color, 180), #333, #fff, 60%);
+}
+
+.complement-2 {
+  background-color: @complement2;
+  color: contrast(lighten(spin(@color, 180), 15%), #333, #fff, 60%);
+}
+
+.complement-3 {
+  background-color: @complement3;
+  color: contrast(lighten(spin(@color, 180), 25%), #333, #fff, 60%);
+}
+
+.complement-4 {
+  background-color: @complement4;
+  color: contrast(darken(spin(@color, 180), 15%), #333, #fff, 60%);
+}
+
+.complement-5 {
+  background-color: @complement5;
+  color: contrast(darken(spin(@color, 180), 25%), #333, #fff, 60%);
+}
+
+
+.secondary-1 {
+  background-color: @secondary1;
+  color: contrast(spin(@color, 120), #333, #fff, 60%);
+}
+
+.secondary-2 {
+  background-color: @secondary2;
+  color: contrast(lighten(spin(@color, 120), 15%), #333, #fff, 60%);
+}
+
+.secondary-3 {
+  background-color: @secondary3;
+  color: contrast(lighten(spin(@color, 120), 25%), #333, #fff, 60%);
+}
+
+.secondary-4 {
+  background-color: @secondary4;
+  color: contrast(darken(spin(@color, 120), 15%), #333, #fff, 60%);
+}
+
+.secondary-5 {
+  background-color: @secondary5;
+  color: contrast(darken(spin(@color, 120), 25%), #333, #fff, 60%);
+}
+
+.tertiary-1 {
+  background-color: @tertiary1;
+  color: contrast(spin(@color, 240 ), #333, #fff, 60%);
+}
+
+.tertiary-2 {
+  background-color: @tertiary2;
+  color: contrast(lighten(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.tertiary-3 {
+  background-color: @tertiary3;
+  color: contrast(lighten(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.tertiary-4 {
+  background-color: @tertiary4;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.tertiary-5 {
+  background-color: @tertiary5;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+
+.rightAnalogous1 {
+  background-color: @rightAnalogous1;
+  color: contrast(spin(@color, 240 ), #333, #fff, 60%);
+}
+
+.rightAnalogous2 {
+  background-color: @rightAnalogous2;
+  color: contrast(lighten(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.rightAnalogous3 {
+  background-color: @rightAnalogous3;
+  color: contrast(lighten(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.rightAnalogous4 {
+  background-color: @rightAnalogous4;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.rightAnalogous5 {
+  background-color: @rightAnalogous5;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.leftAnalogous1 {
+  background-color: @leftAnalogous1;
+  color: contrast(spin(@color, 240 ), #333, #fff, 60%);
+}
+
+.leftAnalogous2 {
+  background-color: @leftAnalogous2;
+  color: contrast(lighten(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.leftAnalogous3 {
+  background-color: @leftAnalogous3;
+  color: contrast(lighten(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.leftAnalogous4 {
+  background-color: @leftAnalogous4;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.leftAnalogous5 {
+  background-color: @leftAnalogous5;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.leftSplitComplementary1 {
+  background-color: @leftSplitComplementary1;
+  color: contrast(spin(@color, 240 ), #333, #fff, 60%);
+}
+
+.leftSplitComplementary2 {
+  background-color: @leftSplitComplementary2;
+  color: contrast(lighten(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.leftSplitComplementary3 {
+  background-color: @leftSplitComplementary3;
+  color: contrast(lighten(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.leftSplitComplementary4 {
+  background-color: @leftSplitComplementary4;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.leftSplitComplementary5 {
+  background-color: @leftSplitComplementary5;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.rightSplitComplementary1 {
+  background-color: @rightSplitComplementary1;
+  color: contrast(spin(@color, 240 ), #333, #fff, 60%);
+}
+
+.rightSplitComplementary2 {
+  background-color: @rightSplitComplementary2;
+  color: contrast(lighten(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.rightSplitComplementary3 {
+  background-color: @rightSplitComplementary3;
+  color: contrast(lighten(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.rightSplitComplementary4 {
+  background-color: @rightSplitComplementary4;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.rightSplitComplementary5 {
+  background-color: @rightSplitComplementary5;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.grey1 {
+   background-color: @grey1;
+   color: contrast(spin(@color, 240 ), #333, #fff, 60%);
+ }
+
+.grey2 {
+  background-color: @grey2;
+  color: contrast(lighten(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.grey3 {
+  background-color: @grey3;
+  color: contrast(lighten(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.grey4 {
+  background-color: @grey4;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.grey5 {
+  background-color: @grey5;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+.grey6 {
+  background-color: @grey6;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.grey7 {
+  background-color: @grey7;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.grey1Saturate {
+  background-color: @grey1Saturate;
+  color: contrast(spin(@color, 240 ), #333, #fff, 60%);
+}
+
+.grey2Saturate {
+  background-color: @grey2Saturate;
+  color: contrast(lighten(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.grey3Saturate {
+  background-color: @grey3Saturate;
+  color: contrast(lighten(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+
+.grey4Saturate {
+  background-color: @grey4Saturate;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.grey5Saturate {
+  background-color: @grey5Saturate;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}
+.grey6Saturate {
+  background-color: @grey6Saturate;
+  color: contrast(darken(spin(@color, 240), 15%), #333, #fff, 60%);
+}
+
+.grey7Saturate {
+  background-color: @grey7Saturate;
+  color: contrast(darken(spin(@color, 240), 25%), #333, #fff, 60%);
+}

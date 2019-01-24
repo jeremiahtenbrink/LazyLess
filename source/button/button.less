@@ -6,10 +6,11 @@
   padding: 1.2rem 5rem;
   border-radius: 18px;
   border: none;
+ 
 }
 
 
-.button-scaleOutOnHover (@bg-color: @button-success, @border-radius: @button-border-radius) {
+.button-scale-out-on-hover (@bg-color: @button-success, @border-radius: @button-border-radius) {
 
   position: relative;
   &::after {
@@ -34,10 +35,47 @@
   }
 }
 
-.buttonPress(@color: black, @opacity: @default-box-shadow-opacity, @blur: @default-box-shadow-blur, @x: 0, @y: (@default-box-shadow-offsetY - 3px), @width: @default-box-shadow-width) {
+.button-press(@color: black, @opacity: @default-box-shadow-opacity, @blur: @default-box-shadow-blur, @x: 0, @y: (@default-box-shadow-offsetY - 3px), @width: @default-box-shadow-width) {
 
   &:active {
     transform: translateY(3px);
     .aesthetic-box-shadow (@color , @blur, @width,  @opacity, @x,  @y);
+  }
+}
+
+.button-border-right-grow-on-hover (@color, @size: 2px) {
+  transition: all .4s;
+  box-sizing: padding-box;
+  
+  &:hover {
+    border-right: @size solid @color;
+    
+  }
+}
+
+.button-border-left-grow-on-hover (@color, @size: 2px) {
+  transition: all .4s;
+  
+  &:hover {
+    border-left: @size solid @color;
+    
+  }
+}
+
+.button-border-top-grow-on-hover (@color, @size: 2px) {
+  transition: all .4s;
+  
+  &:hover {
+    border-top: @size solid @color;
+    
+  }
+}
+
+.button-border-bottom-grow-on-hover (@color, @size: 2px) {
+  transition: all .4s;
+  
+  &:hover {
+    border-bottom: @size solid @color;
+    
   }
 }

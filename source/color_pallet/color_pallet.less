@@ -1,0 +1,122 @@
+// Variables
+
+@triad-percentage: 30%;
+@saturation-percentage: 30%;
+@desaturate-percentage: 30%;
+@adjacent-color-distance: 30%;
+@lighten-percentage-distance: 15%;
+@darken-percentage-distance: 15%;
+
+#primary () {
+    .color (@color: @color){
+        one: lighten(@color, (@lighten-percentage-distance * 2));
+        two: lighten(@color, @lighten-percentage-distance);
+        three: @color;
+        four: darken(@color, @darken-percentage-distance);
+        five: darken(@color, (@darken-percentage-distance * 2));
+    }
+    
+    .saturate(){
+        saturate(.color[1], @saturation-percentage);
+        saturate1: saturate(.color[one], @saturation-percentage);
+        saturate2: saturate(.color[two], @saturation-percentage);
+        saturate3: saturate(.color[three], @saturation-percentage);
+        saturate4: saturate(.color[four], @saturation-percentage);
+        saturate5: saturate(.color[five], @saturation-percentage);
+    }
+}
+
+@primary1Saturate: saturate(@primary1, @saturation-percentage);
+@primary2Saturate: saturate(@primary2, @saturation-percentage);
+@primary3Saturate: saturate(@primary3, @saturation-percentage);
+@primary4Saturate: saturate(@primary4, @saturation-percentage);
+@primary5Saturate: saturate(@primary5, @saturation-percentage);
+
+@primary1deSaturate: desaturate(@primary1, @desaturate-percentage);
+@primary2deSaturate: desaturate(@primary2, @desaturate-percentage);
+@primary3deSaturate: desaturate(@primary3, @desaturate-percentage);
+@primary4deSaturate: desaturate(@primary4, @desaturate-percentage);
+@primary5deSaturate: desaturate(@primary5, @desaturate-percentage);
+
+@complement1: lighten(@complement3, calc(@lighten-percentage-distance * 2));
+@complement2: lighten(@complement3, @lighten-percentage-distance);
+@complement3: spin(@color, 180);
+@complement4: darken(@complement3, @darken-percentage-distance);
+@complement5: darken(@complement3, calc(@darken-percentage-distance * 2));
+
+@complement1-saturate: saturate(@complement1, @saturation-percentage);
+@complement2-saturate: saturate(@complement2, @saturation-percentage);
+@complement3-saturate: saturate(@complement3, @saturation-percentage);
+@complement4-saturate: saturate(@complement4, @saturation-percentage);
+@complement5-saturate: saturate(@complement5, @saturation-percentage);
+
+@complement1-desaturate: desaturate(@complement1, @desaturate-percentage);
+@complement2-desaturate: desaturate(@complement2, @desaturate-percentage);
+@complement3-desaturate: desaturate(@complement3, @desaturate-percentage);
+@complement4-desaturate: desaturate(@complement4, @desaturate-percentage);
+@complement5-desaturate: desaturate(@complement5, @desaturate-percentage);
+
+
+@adjacent-left1: lighten(@adjacent-left3, calc(@lighten-percentage-distance * 2));
+@adjacent-left2: lighten(@adjacent-left3, @lighten-percentage-distance);
+@adjacent-left3: spin(@color, -@adjacent-color-distance);
+@adjacent-left4: darken(@adjacent-left3, @darken-percentage-distance);
+@adjacent-left5: darken(@adjacent-left3, calc(@darken-percentage-distance));
+
+
+@adjacent-right1: lighten(@adjacent-right3, calc(@lighten-percentage-distance * 2));
+@adjacent-right2: lighten(@adjacent-right3, @lighten-percentage-distance);
+@adjacent-right3: spin(@color, @adjacent-color-distance);
+@adjacent-right4: darken(@adjacent-right3, 15%);
+@adjacent-right5: darken(@adjacent-right3, 25%);
+
+@rightAnalogous1: lighten(spin(@color, 30), 25%);
+@rightAnalogous2: lighten(spin(@color, 30), 15%);
+@rightAnalogous3: spin(@color, 30);
+@rightAnalogous4: darken(spin(@color, 30), 15%);
+@rightAnalogous5: darken(spin(@color, 30), 25%);
+
+@leftAnalogous1: lighten(spin(@color, -30), 25%);
+@leftAnalogous2: lighten(spin(@color, -30), 15%);
+@leftAnalogous3: spin(@color, -30);
+@leftAnalogous4: darken(spin(@color, -30), 15%);
+@leftAnalogous5: darken(spin(@color, -30), 25%);
+
+@leftSplitComplementary1: lighten(spin(@color, 150), 25%);
+@leftSplitComplementary2: lighten(spin(@color, 150), 15%);
+@leftSplitComplementary3: spin(@color, 150);
+@leftSplitComplementary4: darken(spin(@color, 150), 15%);
+@leftSplitComplementary5: darken(spin(@color, 150), 25%);
+
+
+@rightSplitComplementary1: lighten(spin(@color, -150), 25%);
+@rightSplitComplementary2: lighten(spin(@color, -150), 15%);
+@rightSplitComplementary3: spin(@color, -150);
+@rightSplitComplementary4: darken(spin(@color, -150), 15%);
+@rightSplitComplementary5: darken(spin(@color, -150), 25%);
+
+
+
+@grey1: lighten(@grey5, 45%);
+@grey2: lighten(@grey5, 35%);
+@grey3: lighten(@grey5, 25%);
+@grey4: lighten(@grey5, 15%);
+@grey5: grey;
+@grey6: darken(@grey5, 15%);
+@grey7: darken(@grey5, 25%);
+
+@grey1Saturate: saturate(@grey1, 10%);
+@grey2Saturate: saturate(@grey2, 10%);
+@grey3Saturate: saturate(@grey3, 10%);
+@grey4Saturate: saturate(@grey4, 10%);
+@grey5Saturate: saturate(@grey5, 10%);
+@grey6Saturate: saturate(@grey6, 10%);
+@grey7Saturate: saturate(@grey7, 10%);
+
+@mix1: mix(@color, spin(@color, 80));
+@mix2: mix(@color, spin(@color, 70));
+@mix3: mix(@color, spin(@color, 60));
+@mix4: mix(@color, spin(@color, 50));
+@mix5: mix(@color, spin(@color, 90));
+@mix6: mix(@color, spin(@color, 100));
+@mix7: mix(@color, spin(@color, 110));

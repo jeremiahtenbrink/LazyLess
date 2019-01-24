@@ -1,9 +1,12 @@
 @import "source/base";
+@import "source/reset";
 @import "source/attention_seekers/attentionSeekers";
 @import "source/background/background";
 @import "source/bouncing_entrances/bounce-enterances";
 @import "source/bouncing_exits/bouncing-exits";
 @import "source/button/button";
+@import "source/color_pallet/color_pallet";
+@import "source/color_pallet/color_pallet_example";
 @import "source/fading_entrances/fading-entrances";
 @import "source/fading_exits/fading-exits";
 @import "source/flippers/flippers";
@@ -18,30 +21,4 @@
 @import "source/zooming_exits/zooming_exits";
 
 
-
-.test-container {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.test-button {
-
-  .background-radial-gradient-darken-on-hover(@button-info, darkblue );
-  margin-top: 50px;
-  .button-mixin();
-  .aesthetic-box-shadow(black);
-  .button-scaleOutOnHover(@button-info);
-  .buttonPress();
-  transition: all .2s;
-
-  &:hover,
-  &:focus{
-    outline: none;
-  }
-
-
-}
 

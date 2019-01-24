@@ -297,7 +297,7 @@
 }
 
 .background-linear-gradient(@color1, @color2){
-    background-image: linear-gradient(to bottom right, @color1, @color2);
+    background-image+: linear-gradient(to bottom right, @color1, @color2);
 }
 
 .background-linear-gradient-glow-on-hover (@color1, @color2, @glowPercentage: 25%){
@@ -312,7 +312,7 @@
     .background-linear-gradient(@color1, @color2);
     
     &:hover{
-        .background-linear-gradient( darken( @color1, @darkenPercentage), @color2);
+        .background-linear-gradient( darken( @color1, @darkenPercentage), darken(@color2, @darkenPercentage));
     }
 }
 
@@ -346,3 +346,25 @@
                 @location, @x, @y, @color1InsidePercent, @colorOutsidePercent);
     }
 }
+
+.background-slide-over (@color: white, @opacity: .4, @skew: 45deg) {
+    position: relative;
+    overflow: hidden;
+    
+    &:after {
+        content: '';
+        background-color: rgba(@color, @opacity);
+        width: 100%;
+        height: 100%;
+        transform: translateX(-120%) skewX(@skew);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .4s;
+    }
+    
+    &:hover:after {
+        transform: translateX(0) skewX(@skew);
+    }
+}
+

@@ -1,0 +1,772 @@
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    animation: unset !important;
+    transition: none !important;
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+.color_pallet {
+  margin: 1rem;
+  background-color: #556270;
+  color: #fff;
+}
+.color_pallet .mono {
+  display: flex;
+  justify-content: stretch;
+  font-size: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4);
+  margin: 1rem 0;
+}
+.color_pallet .mono > div {
+  flex-grow: 1;
+  display: inline-block;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.color_pallet .mono > div:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.color_pallet .mono > div:last-child {
+  border-radius: 0 10px 10px 0;
+}
+h2 {
+  text-align: center;
+}
+.primary-1 {
+  background-color: #c7e1d7;
+  color: #fff;
+}
+.primary-2 {
+  background-color: #a6cfbf;
+  color: #fff;
+}
+.primary-3 {
+  background-color: #74b49b;
+  color: #333;
+}
+.primary-4 {
+  background-color: #4d8f75;
+  color: #fff;
+}
+.primary-5 {
+  background-color: #3b6d5a;
+  color: #fff;
+}
+.mix1 {
+  background-color: #7496a8;
+  color: #fff;
+}
+.mix2 {
+  background-color: #749ba8;
+  color: #fff;
+}
+.mix3 {
+  background-color: #74a1a8;
+  color: #fff;
+}
+.mix4 {
+  background-color: #74a6a8;
+  color: #fff;
+}
+.mix5 {
+  background-color: #7794a8;
+  color: #fff;
+}
+.mix6 {
+  background-color: #7d94a8;
+  color: #fff;
+}
+.mix7 {
+  background-color: #8294a8;
+  color: #fff;
+}
+.primary-1Saturate {
+  background-color: #baeed9;
+  color: #fff;
+}
+.primary-2Saturate {
+  background-color: #91e3c3;
+  color: #fff;
+}
+.primary-3Saturate {
+  background-color: #54d4a2;
+  color: #333;
+}
+.primary-4Saturate {
+  background-color: #2caf7c;
+  color: #fff;
+}
+.primary-5Saturate {
+  background-color: #22875f;
+  color: #fff;
+}
+.primary-1deSaturate {
+  background-color: #d4d4d4;
+  color: #fff;
+}
+.primary-2deSaturate {
+  background-color: #bababa;
+  color: #fff;
+}
+.primary-3deSaturate {
+  background-color: #949494;
+  color: #333;
+}
+.primary-4deSaturate {
+  background-color: #6e6e6e;
+  color: #fff;
+}
+.primary-5deSaturate {
+  background-color: #545454;
+  color: #fff;
+}
+.complement-1 {
+  background-color: #d7c7e1;
+  color: #fff;
+}
+.complement-2 {
+  background-color: #bfa6cf;
+  color: #fff;
+}
+.complement-3 {
+  background-color: #9b74b4;
+  color: #333;
+}
+.complement-4 {
+  background-color: #754d8f;
+  color: #fff;
+}
+.complement-5 {
+  background-color: #5a3b6d;
+  color: #fff;
+}
+.secondary-1 {
+  background-color: #e1c7d1;
+  color: #fff;
+}
+.secondary-2 {
+  background-color: #cfa6b6;
+  color: #fff;
+}
+.secondary-3 {
+  background-color: #b4748d;
+  color: #333;
+}
+.secondary-4 {
+  background-color: #8f4d67;
+  color: #fff;
+}
+.secondary-5 {
+  background-color: #6d3b4f;
+  color: #fff;
+}
+.tertiary-1 {
+  background-color: #c7c8e1;
+  color: #fff;
+}
+.tertiary-2 {
+  background-color: #a6a8cf;
+  color: #fff;
+}
+.tertiary-3 {
+  background-color: #7478b4;
+  color: #333;
+}
+.tertiary-4 {
+  background-color: #4d518f;
+  color: #fff;
+}
+.tertiary-5 {
+  background-color: #3b3e6d;
+  color: #fff;
+}
+.rightAnalogous1 {
+  background-color: #c7dee1;
+  color: #fff;
+}
+.rightAnalogous2 {
+  background-color: #a6cacf;
+  color: #fff;
+}
+.rightAnalogous3 {
+  background-color: #74adb4;
+  color: #333;
+}
+.rightAnalogous4 {
+  background-color: #4d878f;
+  color: #fff;
+}
+.rightAnalogous5 {
+  background-color: #3b686d;
+  color: #fff;
+}
+.leftAnalogous1 {
+  background-color: #c7e1ca;
+  color: #fff;
+}
+.leftAnalogous2 {
+  background-color: #a6cfaa;
+  color: #fff;
+}
+.leftAnalogous3 {
+  background-color: #74b47b;
+  color: #333;
+}
+.leftAnalogous4 {
+  background-color: #4d8f54;
+  color: #fff;
+}
+.leftAnalogous5 {
+  background-color: #3b6d41;
+  color: #fff;
+}
+.leftSplitComplementary1 {
+  background-color: #e1c7de;
+  color: #fff;
+}
+.leftSplitComplementary2 {
+  background-color: #cfa6ca;
+  color: #fff;
+}
+.leftSplitComplementary3 {
+  background-color: #b474ad;
+  color: #333;
+}
+.leftSplitComplementary4 {
+  background-color: #8f4d87;
+  color: #fff;
+}
+.leftSplitComplementary5 {
+  background-color: #6d3b68;
+  color: #fff;
+}
+.rightSplitComplementary1 {
+  background-color: #e1cac7;
+  color: #fff;
+}
+.rightSplitComplementary2 {
+  background-color: #cfaaa6;
+  color: #fff;
+}
+.rightSplitComplementary3 {
+  background-color: #b47b74;
+  color: #333;
+}
+.rightSplitComplementary4 {
+  background-color: #8f544d;
+  color: #fff;
+}
+.rightSplitComplementary5 {
+  background-color: #6d413b;
+  color: #fff;
+}
+.grey1 {
+  background-color: #f3f3f3;
+  color: #fff;
+}
+.grey2 {
+  background-color: #d9d9d9;
+  color: #fff;
+}
+.grey3 {
+  background-color: #c0c0c0;
+  color: #333;
+}
+.grey4 {
+  background-color: #a6a6a6;
+  color: #fff;
+}
+.grey5 {
+  background-color: grey;
+  color: #fff;
+}
+.grey6 {
+  background-color: #5a5a5a;
+  color: #fff;
+}
+.grey7 {
+  background-color: #404040;
+  color: #fff;
+}
+.grey1Saturate {
+  background-color: #f4f2f2;
+  color: #fff;
+}
+.grey2Saturate {
+  background-color: #ddd5d5;
+  color: #fff;
+}
+.grey3Saturate {
+  background-color: #c6b9b9;
+  color: #333;
+}
+.grey4Saturate {
+  background-color: #af9d9d;
+  color: #fff;
+}
+.grey5Saturate {
+  background-color: #8d7373;
+  color: #fff;
+}
+.grey6Saturate {
+  background-color: #635151;
+  color: #fff;
+}
+.grey7Saturate {
+  background-color: #473a3a;
+  color: #fff;
+}
+body {
+  background-image: linear-gradient(to bottom right, #e2e2e2c9, #7baed8cf), url("./media/robert-lukeman-150146-unsplash.jpg");
+  animation: bg-pan-tr 30s both;
+  background-size: cover;
+  min-height: 100vh;
+}
+@-webkit-keyframes bg-pan-tr {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+@keyframes bg-pan-tr {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.test-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.test-button {
+  margin-top: 50px;
+  margin-right: 1rem;
+  font-size: 20px;
+  padding: 1.2rem 5rem;
+  border-radius: 18px;
+  border: none;
+}
+.button__1 {
+  background-image: radial-gradient(closest-corner at 50% 50%, #537ee8 0, blue 100%);
+}
+.button__1:hover {
+  background-image: radial-gradient(closest-corner at 50% 50%, #80a0ee 0, #3333ff 100%);
+}
+.button__2 {
+  background-image: linear-gradient(to bottom right, lightgreen, green);
+}
+.button__3 {
+  background-image: linear-gradient(to bottom right, #f59090, red);
+}
+.button__3:hover {
+  background-image: linear-gradient(to bottom right, #ea1b1b, #800000);
+}
+.button__4 {
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+.button__4:active {
+  transform: translateY(3px);
+  box-shadow: 0 -3px 20px 2px rgba(0, 0, 0, 0.5);
+}
+.button__5 {
+  background-image: linear-gradient(to bottom right, #537ee8, #163fa5);
+  position: relative;
+}
+.button__5::after {
+  content: "";
+  display: inline-block;
+  height: 90%;
+  width: 90%;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transition: all 0.7s;
+  background-color: #537ee8;
+  transform: translateX(-50%) translateY(-50%);
+}
+.button__5:hover::after {
+  transform: translateX(-50%) translateY(-50%) scaleX(2) scaleY(2);
+  opacity: 0;
+}
+.button__6 {
+  background-color: lightgreen;
+  box-shadow: inset 0 0 32px 9px rgba(0, 0, 0, 0.5);
+}
+.button__6:hover {
+  animation-iteration-count: infinite;
+  animation-name: heartBeat;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+.button__7 {
+  background-image: linear-gradient(to bottom right, lightgreen, #189a18);
+  animation-name: lightSpeedIn;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.button__7:hover {
+  background-image: linear-gradient(to bottom right, #22dd22, #072c07);
+}
+@keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(-5deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.button__7:hover {
+  animation-duration: 0.75s;
+  animation-name: flipOutX;
+  backface-visibility: visible !important;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+.button__8 {
+  background-image: linear-gradient(to bottom right, #537ee8, #163fa5);
+}
+.button__9 {
+  -webkit-animation: color-change-5x 8s linear infinite alternate both;
+  animation: color-change-5x 8s linear infinite alternate both;
+}
+@-webkit-keyframes color-change-5x {
+  0% {
+    background: blue;
+  }
+  25% {
+    background: green;
+  }
+  50% {
+    background: red;
+  }
+  75% {
+    background: orange;
+  }
+  100% {
+    background: pink;
+  }
+}
+@keyframes color-change-5x {
+  0% {
+    background: blue;
+  }
+  25% {
+    background: green;
+  }
+  50% {
+    background: red;
+  }
+  75% {
+    background: orange;
+  }
+  100% {
+    background: pink;
+  }
+}
+.button__10 {
+  background-color: #f59090;
+  animation-name: wobble;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  animation-iteration-count: 5;
+}
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.button__11 {
+  background-color: steelblue;
+  animation-delay: 6s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: hinge;
+}
+@keyframes hinge {
+  0% {
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  20%,
+  60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  40%,
+  80% {
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+.button__12 {
+  background-image: radial-gradient(closest-corner at 50% 50%, #537ee8 0, #163fa5 100%);
+  box-shadow: inset 0 0 32px 9px rgba(0, 0, 0, 0.5), -1px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.button__12:hover {
+  color: white;
+  background-image: radial-gradient(closest-corner at 50% 50%, #163fa5 0, #071435 100%);
+}
+.button__12:active {
+  transform: translateY(3px);
+  box-shadow: 0 -3px 20px 2px rgba(0, 0, 0, 0.5);
+}
+.button__12::after {
+  content: "";
+  display: inline-block;
+  height: 90%;
+  width: 90%;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transition: all 0.7s;
+  background-color: blue;
+  transform: translateX(-50%) translateY(-50%);
+}
+.button__12:hover::after {
+  transform: translateX(-50%) translateY(-50%) scaleX(2) scaleY(2);
+  opacity: 0;
+}
+.button__13 {
+  background-color: lightgreen;
+  position: relative;
+  overflow: hidden;
+}
+.button__13:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  transform: translateX(-120%) skewX(50deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+.button__13:hover:after {
+  transform: translateX(0) skewX(50deg);
+}
+.button__14 {
+  box-sizing: padding-box;
+  transition: all 0.4s;
+}
+.button__14:hover {
+  border-right: 5px solid green;
+}
+.button__14:hover {
+  border-top: 5px solid green;
+}
+.button__15 {
+  background-color: #74b49b;
+  border: 2px solid #7496a8;
+}
+/*# sourceMappingURL=index.css.map */
