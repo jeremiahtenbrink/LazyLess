@@ -2,24 +2,24 @@
 @darken-percentage-distance: 15%;
 @saturation-percentage: 20%;
 @desaturate-percentage: 20%;
-@color:  hsl(180.28037383, 79.77653631%, 65.09803922%);
+@color:  hsl(180.28037383, 50.77653631%, 60.09803922%);
 
 .colors(@color){
     
     @greaterThan90: boolean(saturation(@color) > (100% - @saturation-percentage));
     @baseColor: if(@greaterThan90, desaturate(@color, @saturation-percentage), @color);
-    //@lessThanSaturation: boolean(saturation(@color) < @desaturate-percentage);
-    //@baseColor: if(@lessThanSaturation, saturate(@color, @desaturate-percentage), @color);
+    @lessThanSaturation: boolean(saturation(@color) < @desaturate-percentage);
+    @baseColor: if(@lessThanSaturation, saturate(@color, @desaturate-percentage), @color);
     
     .base-colors(@color){
-        @color1: lighten(hsl(@color), (@lighten-percentage-distance * 2));
+        @color1: lighten(@color, (@lighten-percentage-distance * 2));
         @color2: lighten(@color, @lighten-percentage-distance);
         @color3: @color;
         @color4: darken(@color, @darken-percentage-distance);
         @color5: darken(@color, (@darken-percentage-distance * 2));
         
         .saturate(){
-            @saturate1: saturate(hsl(@color1), @saturation-percentage);
+            @saturate1: saturate(@color1, @saturation-percentage);
             @saturate2: saturate(@color2, @saturation-percentage);
             @saturate3: saturate(@color3, @saturation-percentage);
             @saturate4: saturate(@color4, @saturation-percentage);
@@ -29,7 +29,7 @@
         .saturate();
         
         .desaturate(){
-            @desaturate1: desaturate(hsl(@color1), @desaturate-percentage);
+            @desaturate1: desaturate(@color1, @desaturate-percentage);
             @desaturate2: desaturate(@color2, @desaturate-percentage);
             @desaturate3: desaturate(@color3, @desaturate-percentage);
             @desaturate4: desaturate(@color4, @desaturate-percentage);
@@ -95,6 +95,8 @@
 @grey5Saturate: saturate(@grey5, 10%);
 @grey6Saturate: saturate(@grey6, 10%);
 @grey7Saturate: saturate(@grey7, 10%);
+
+
 
 @mix1: mix(@color, spin(@color, 80));
 @mix2: mix(@color, spin(@color, 70));
