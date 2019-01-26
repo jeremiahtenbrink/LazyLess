@@ -1,6 +1,12 @@
+
+@color: #74b49b; // You may also use RGB Colors
+
 @defaultDuration: 1s;
 @default-box-shadow-offsetX: 0;
 @default-box-shadow-offsetY: 0;
+@default-box-shadow-blur: 20px;
+@default-box-shadow-width: 2px;
+@default-box-shadow-opacity: .5;
 
 //buttons
 @button-success: lightgreen;
@@ -15,6 +21,10 @@
 
 .animation-infinite () {
   animation-iteration-count: infinite;
+}
+
+.animation-count (@count: 3) {
+  animation-iteration-count: @count;
 }
 
 .animation-delay(@duration : 1s){

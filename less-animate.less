@@ -1,5 +1,7 @@
 @import "source/base";
+@import "source/reset";
 @import "source/attention_seekers/attentionSeekers";
+@import "source/background/background";
 @import "source/bouncing_entrances/bounce-enterances";
 @import "source/bouncing_exits/bouncing-exits";
 @import "source/button/button";
@@ -17,26 +19,4 @@
 @import "source/zooming_exits/zooming_exits";
 
 
-
-.test-container {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.test-button {
-
-  margin-top: 50px;
-  .button-mixin(white, @button-info);
-  .aesthetic-shadow-inset-center(black, .7);
-  .aesthetic-box-shadow(black);
-  .button-scaleOutOnHover(@button-info);
-  transition: all .2s;
-
-  &:hover {
-    .aesthetic-shadow-inset-right(red);
-  }
-}
 

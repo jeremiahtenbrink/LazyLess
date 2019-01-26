@@ -1,0 +1,1583 @@
+@import 'less-animate';
+
+@lighten-percentage-distance: 15%;
+@darken-percentage-distance: 15%;
+@saturation-percentage: 20%;
+@desaturate-percentage: 20%;
+@color: hsl(180.28037383, 79.77653631%, 65.09803922%);
+
+.colors(@color){
+    
+    @greaterThan90: boolean(saturation(@color) > (100% - @saturation-percentage));
+    @baseColor: if(@greaterThan90, desaturate(@color, @saturation-percentage), @color);
+    //@lessThanSaturation: boolean(saturation(@color) < @desaturate-percentage);
+    //@baseColor: if(@lessThanSaturation, saturate(@color, @desaturate-percentage), @color);
+    
+    .base-colors(@color){
+        @color1: lighten(hsl(@color), (@lighten-percentage-distance * 2));
+        @color2: lighten(@color, @lighten-percentage-distance);
+        @color3: @color;
+        @color4: darken(@color, @darken-percentage-distance);
+        @color5: darken(@color, (@darken-percentage-distance * 2));
+        
+        .saturate(){
+            @saturate1: saturate(hsl(@color1), @saturation-percentage);
+            @saturate2: saturate(@color2, @saturation-percentage);
+            @saturate3: saturate(@color, @saturation-percentage);
+            @saturate4: saturate(@color4, @saturation-percentage);
+            @saturate5: saturate(@color5, @saturation-percentage);
+        }
+        
+        .saturate();
+        
+        .desaturate(){
+            @desaturate1: desaturate(hsl(@color1), @desaturate-percentage);
+            @desaturate2: desaturate(@color2, @desaturate-percentage);
+            @desaturate3: desaturate(@color, @desaturate-percentage);
+            @desaturate4: desaturate(@color4, @desaturate-percentage);
+            @desaturate5: desaturate(@color5, @desaturate-percentage);
+        }
+        
+        .desaturate();
+    }
+    
+    .base-colors(@baseColor);
+    
+}
+
+#primaryColors{
+    .colors(@color);
+}
+
+#complementaryColors{
+    .colors(spin(@color, 180deg));
+}
+
+#adjacentColors{
+    .leftColors{
+        .colors(spin(@color, 30deg))
+    }
+    
+    .rightColors{
+        .colors(spin(@color, -30deg));
+    }
+}
+
+#triadColors{
+    .leftTriad{
+        .colors (spin(@color, 165deg));
+    }
+    
+    .rightTriad{
+        .colors(spin(@color, 195deg))
+    }
+}
+
+#tetradColors{
+    .left30{
+        .colors(spin(@color, -30deg));
+    }
+    
+    .left30Complementary{
+        .colors(spin(@color, 150deg));
+    }
+}
+
+.body{
+    background-color: #primaryColors[@desaturate3];
+    color:            #complementaryColors[@color3];
+    border:           #adjacentColors.leftColors[@color3];
+}
+
+.primaryColors{
+    .color1{
+        background-color: #primaryColors[@color1];
+    }
+    
+    .color2{
+        background-color: #primaryColors[@color2];
+    }
+    
+    .color3{
+        background-color: #primaryColors[@color3];
+    }
+    
+    .color4{
+        background-color: #primaryColors[@color4];
+    }
+    
+    .color5{
+        background-color: #primaryColors[@color5];
+    }
+    
+    .saturate1{
+        background-color: #primaryColors[@saturate1];
+    }
+    
+    .saturate2{
+        background-color: #primaryColors[@saturate2];
+    }
+    
+    .saturate3{
+        background-color: #primaryColors[@saturate3];
+    }
+    
+    .saturate4{
+        background-color: #primaryColors[@saturate4];
+    }
+    
+    .saturate5{
+        background-color: #primaryColors[@saturate5];
+    }
+    
+    .desaturate1{
+        background-color: #primaryColors[@desaturate1];
+    }
+    
+    .desaturate2{
+        background-color: #primaryColors[@desaturate2];
+    }
+    
+    .desaturate3{
+        background-color: #primaryColors[@desaturate3];
+    }
+    
+    .desaturate4{
+        background-color: #primaryColors[@desaturate4];
+    }
+    
+    .desaturate5{
+        background-color: #primaryColors[@desaturate5];
+    }
+}
+
+.complementaryColors{
+    .color1{
+        background-color: #complementaryColors[@color1];
+    }
+    
+    .color2{
+        background-color: #complementaryColors[@color2];
+    }
+    
+    .color3{
+        background-color: #complementaryColors[@color3];
+    }
+    
+    .color4{
+        background-color: #complementaryColors[@color4];
+    }
+    
+    .color5{
+        background-color: #complementaryColors[@color5];
+    }
+    
+    .saturate1{
+        background-color: #complementaryColors[@saturate1];
+    }
+    
+    .saturate2{
+        background-color: #complementaryColors[@saturate2];
+    }
+    
+    .saturate3{
+        background-color: #complementaryColors[@saturate3];
+    }
+    
+    .saturate4{
+        background-color: #complementaryColors[@saturate4];
+    }
+    
+    .saturate5{
+        background-color: #complementaryColors[@saturate5];
+    }
+    
+    .desaturate1{
+        background-color: #complementaryColors[@desaturate1];
+    }
+    
+    .desaturate2{
+        background-color: #complementaryColors[@desaturate2];
+    }
+    
+    .desaturate3{
+        background-color: #complementaryColors[@desaturate3];
+    }
+    
+    .desaturate4{
+        background-color: #complementaryColors[@desaturate4];
+    }
+    
+    .desaturate5{
+        background-color: #complementaryColors[@desaturate5];
+    }
+}
+
+.adjacentColors{
+    .leftColors{
+        .color1{
+            background-color: #adjacentColors.leftColors[@color1];
+        }
+        
+        .color2{
+            background-color: #adjacentColors.leftColors[@color2];
+        }
+        
+        .color3{
+            background-color: #adjacentColors.leftColors[@color3];
+        }
+        
+        .color4{
+            background-color: #adjacentColors.leftColors[@color4];
+        }
+        
+        .color5{
+            background-color: #adjacentColors.leftColors[@color5];
+        }
+        
+        .saturate1{
+            background-color: #adjacentColors.leftColors[@saturate1];
+        }
+        
+        .saturate2{
+            background-color: #adjacentColors.leftColors[@saturate2];
+        }
+        
+        .saturate3{
+            background-color: #adjacentColors.leftColors[@saturate3];
+        }
+        
+        .saturate4{
+            background-color: #adjacentColors.leftColors[@saturate4];
+        }
+        
+        .saturate5{
+            background-color: #adjacentColors.leftColors[@saturate5];
+        }
+        
+        .desaturate1{
+            background-color: #adjacentColors.leftColors[@desaturate1];
+        }
+        
+        .desaturate2{
+            background-color: #adjacentColors.leftColors[@desaturate2];
+        }
+        
+        .desaturate3{
+            background-color: #adjacentColors.leftColors[@desaturate3];
+        }
+        
+        .desaturate4{
+            background-color: #adjacentColors.leftColors[@desaturate4];
+        }
+        
+        .desaturate5{
+            background-color: #adjacentColors.leftColors[@desaturate5];
+        }
+    }
+    
+    .rightColors{
+        .color1{
+            background-color: #adjacentColors.rightColors[@color1];
+        }
+        
+        .color2{
+            background-color: #adjacentColors.rightColors[@color2];
+        }
+        
+        .color3{
+            background-color: #adjacentColors.rightColors[@color3];
+        }
+        
+        .color4{
+            background-color: #adjacentColors.rightColors[@color4];
+        }
+        
+        .color5{
+            background-color: #adjacentColors.rightColors[@color5];
+        }
+        
+        .saturate1{
+            background-color: #adjacentColors.rightColors[@saturate1];
+        }
+        
+        .saturate2{
+            background-color: #adjacentColors.rightColors[@saturate2];
+        }
+        
+        .saturate3{
+            background-color: #adjacentColors.rightColors[@saturate3];
+        }
+        
+        .saturate4{
+            background-color: #adjacentColors.rightColors[@saturate4];
+        }
+        
+        .saturate5{
+            background-color: #adjacentColors.rightColors[@saturate5];
+        }
+        
+        .desaturate1{
+            background-color: #adjacentColors.rightColors[@desaturate1];
+        }
+        
+        .desaturate2{
+            background-color: #adjacentColors.rightColors[@desaturate2];
+        }
+        
+        .desaturate3{
+            background-color: #adjacentColors.rightColors[@desaturate3];
+        }
+        
+        .desaturate4{
+            background-color: #adjacentColors.rightColors[@desaturate4];
+        }
+        
+        .desaturate5{
+            background-color: #adjacentColors.rightColors[@desaturate5];
+        }
+    }
+    
+}
+
+.triadColors{
+    .leftTriad{
+        .color1{
+            background-color: #triadColors.leftTriad[@color1];
+        }
+        
+        .color2{
+            background-color: #triadColors.leftTriad[@color2];
+        }
+        
+        .color3{
+            background-color: #triadColors.leftTriad[@color3];
+        }
+        
+        .color4{
+            background-color: #triadColors.leftTriad[@color4];
+        }
+        
+        .color5{
+            background-color: #triadColors.leftTriad[@color5];
+        }
+        
+        .saturate1{
+            background-color: #triadColors.leftTriad[@saturate1];
+        }
+        
+        .saturate2{
+            background-color: #triadColors.leftTriad[@saturate2];
+        }
+        
+        .saturate3{
+            background-color: #triadColors.leftTriad[@saturate3];
+        }
+        
+        .saturate4{
+            background-color: #triadColors.leftTriad[@saturate4];
+        }
+        
+        .saturate5{
+            background-color: #triadColors.leftTriad[@saturate5];
+        }
+        
+        .desaturate1{
+            background-color: #triadColors.leftTriad[@desaturate1];
+        }
+        
+        .desaturate2{
+            background-color: #triadColors.leftTriad[@desaturate2];
+        }
+        
+        .desaturate3{
+            background-color: #triadColors.leftTriad[@desaturate3];
+        }
+        
+        .desaturate4{
+            background-color: #triadColors.leftTriad[@desaturate4];
+        }
+        
+        .desaturate5{
+            background-color: #triadColors.leftTriad[@desaturate5];
+        }
+    }
+    
+    .rightTriad{
+        .color1{
+            background-color: #triadColors.rightTriad[@color1];
+        }
+        
+        .color2{
+            background-color: #triadColors.rightTriad[@color2];
+        }
+        
+        .color3{
+            background-color: #triadColors.rightTriad[@color3];
+        }
+        
+        .color4{
+            background-color: #triadColors.rightTriad[@color4];
+        }
+        
+        .color5{
+            background-color: #triadColors.rightTriad[@color5];
+        }
+        
+        .saturate1{
+            background-color: #triadColors.rightTriad[@saturate1];
+        }
+        
+        .saturate2{
+            background-color: #triadColors.rightTriad[@saturate2];
+        }
+        
+        .saturate3{
+            background-color: #triadColors.rightTriad[@saturate3];
+        }
+        
+        .saturate4{
+            background-color: #triadColors.rightTriad[@saturate4];
+        }
+        
+        .saturate5{
+            background-color: #triadColors.rightTriad[@saturate5];
+        }
+        
+        .desaturate1{
+            background-color: #triadColors.rightTriad[@desaturate1];
+        }
+        
+        .desaturate2{
+            background-color: #triadColors.rightTriad[@desaturate2];
+        }
+        
+        .desaturate3{
+            background-color: #triadColors.rightTriad[@desaturate3];
+        }
+        
+        .desaturate4{
+            background-color: #triadColors.rightTriad[@desaturate4];
+        }
+        
+        .desaturate5{
+            background-color: #triadColors.rightTriad[@desaturate5];
+        }
+    }
+    
+}
+
+.tetradColors{
+    .left30{
+        .color1{
+            background-color: #tetradColors.left30[@color1];
+        }
+        
+        .color2{
+            background-color: #tetradColors.left30[@color2];
+        }
+        
+        .color3{
+            background-color: #tetradColors.left30[@color3];
+        }
+        
+        .color4{
+            background-color: #tetradColors.left30[@color4];
+        }
+        
+        .color5{
+            background-color: #tetradColors.left30[@color5];
+        }
+        
+        .saturate1{
+            background-color: #tetradColors.left30[@saturate1];
+        }
+        
+        .saturate2{
+            background-color: #tetradColors.left30[@saturate2];
+        }
+        
+        .saturate3{
+            background-color: #tetradColors.left30[@saturate3];
+        }
+        
+        .saturate4{
+            background-color: #tetradColors.left30[@saturate4];
+        }
+        
+        .saturate5{
+            background-color: #tetradColors.left30[@saturate5];
+        }
+        
+        .desaturate1{
+            background-color: #tetradColors.left30[@desaturate1];
+        }
+        
+        .desaturate2{
+            background-color: #tetradColors.left30[@desaturate2];
+        }
+        
+        .desaturate3{
+            background-color: #tetradColors.left30[@desaturate3];
+        }
+        
+        .desaturate4{
+            background-color: #tetradColors.left30[@desaturate4];
+        }
+        
+        .desaturate5{
+            background-color: #tetradColors.left30[@desaturate5];
+        }
+    }
+    
+    .left30Complementary{
+        .color1{
+            background-color: #tetradColors.left30Complementary[@color1];
+        }
+        
+        .color2{
+            background-color: #tetradColors.left30Complementary[@color2];
+        }
+        
+        .color3{
+            background-color: #tetradColors.left30Complementary[@color3];
+        }
+        
+        .color4{
+            background-color: #tetradColors.left30Complementary[@color4];
+        }
+        
+        .color5{
+            background-color: #tetradColors.left30Complementary[@color5];
+        }
+        
+        .saturate1{
+            background-color: #tetradColors.left30Complementary[@saturate1];
+        }
+        
+        .saturate2{
+            background-color: #tetradColors.left30Complementary[@saturate2];
+        }
+        
+        .saturate3{
+            background-color: #tetradColors.left30Complementary[@saturate3];
+        }
+        
+        .saturate4{
+            background-color: #tetradColors.left30Complementary[@saturate4];
+        }
+        
+        .saturate5{
+            background-color: #tetradColors.left30Complementary[@saturate5];
+        }
+        
+        .desaturate1{
+            background-color: #tetradColors.left30Complementary[@desaturate1];
+        }
+        
+        .desaturate2{
+            background-color: #tetradColors.left30Complementary[@desaturate2];
+        }
+        
+        .desaturate3{
+            background-color: #tetradColors.left30Complementary[@desaturate3];
+        }
+        
+        .desaturate4{
+            background-color: #tetradColors.left30Complementary[@desaturate4];
+        }
+        
+        .desaturate5{
+            background-color: #tetradColors.left30Complementary[@desaturate5];
+        }
+    }
+    
+}
+
+.adjacentColors, .triadColors, .tetradColors{
+    
+    .leftColors,
+    .rightColors,
+    .leftTriad,
+    .rightTriad,
+    .left30,
+    .left30Complementary{
+        display:         flex;
+        justify-content: stretch;
+        font-size:       0;
+        border-radius:   10px;
+        box-shadow:      0 0 8px 1px rgba(0, 0, 0, .4);
+        margin:          1rem 0;
+        
+        > div{
+            flex-grow:   1;
+            display:     inline-block;
+            padding:     1rem 0;
+            
+            font-size:   1rem;
+            font-weight: bold;
+            text-align:  center;
+            
+            &:first-child{
+                border-radius: 10px 0 0 10px;
+            }
+            
+            &:last-child{
+                border-radius: 0 10px 10px 0;
+            }
+        }
+    }
+}
+
+.primaryColors,
+.complementaryColors{
+    
+    display:         flex;
+    justify-content: stretch;
+    font-size:       0;
+    border-radius:   10px;
+    box-shadow:      0 0 8px 1px rgba(0, 0, 0, .4);
+    margin:          1rem 0;
+    
+    > div{
+        flex-grow:   1;
+        display:     inline-block;
+        padding:     1rem 0;
+        
+        font-size:   1rem;
+        font-weight: bold;
+        text-align:  center;
+        
+        &:first-child{
+            border-radius: 10px 0 0 10px;
+        }
+        
+        &:last-child{
+            border-radius: 0 10px 10px 0;
+        }
+    }
+    
+}
+
+.main-box{
+    display:   flex;
+    flex-wrap: wrap;
+    margin:    0 auto;
+    width:     70vw;
+    height:    70vh;
+    .border();
+    
+    h2{
+        font-size: 1rem;
+    }
+}
+
+@primary3: #primaryColors[@color3];
+.pallet-box-1{
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: space-around;
+    transition:      all .4s;
+    .background-linear-gradient-saturate-desaturate(@primary3);
+    
+}
+
+.primaryColors-boxpallet{
+    width:           100%;
+    height:          15%;
+    display:         flex;
+    justify-content: space-around;
+    
+    .pallet-box-1-shade-1{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate1];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate1];
+        }
+        
+    }
+    
+    .pallet-box-1-shade-2{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate2];
+        }
+        
+    }
+    
+    .pallet-box-1-shade-3{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate3];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate3];
+        }
+        
+    }
+    
+    .pallet-box-1-shade-4{
+         width: 100%;
+         margin: 0 2.5px;
+         display: flex;
+         .desaturate{
+             width: 100%;
+             height: 100%;
+             background-color: #primaryColors[@color4];
+         }
+         .color {
+             width: 100%;
+             height: 100%;
+             background-color: #primaryColors[@saturate4];
+         }
+    
+         .saturate {
+             width: 100%;
+             height: 100%;
+             background-color: #primaryColors[@desaturate4];
+         }
+    
+     }
+    
+    .pallet-box-1-shade-5{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate5];
+        }
+        
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate5];
+        }
+        
+    }
+}
+
+.leftColors{
+    width:           100%;
+    height:          15%;
+    display:         flex;
+    
+    .pallet-box-2-shade-1{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color1];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate1];
+        }
+        
+    }
+    
+    .pallet-box-2-shade-2{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate2];
+        }
+        
+    }
+    
+    .pallet-box-2-shade-3{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color3];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate3];
+        }
+        
+    }
+    
+    .pallet-box-2-shade-4{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate4];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color4];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate4];
+        }
+        
+    }
+    .pallet-box-2-shade-5{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color5];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate5];
+        }
+        
+    }
+}
+
+.pallet-box-2{
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
+    @color3: #adjacentColors.leftColors[@color3];
+    .background-linear-gradient-saturate-desaturate(@color3);
+    justify-content: space-around;
+    
+}
+
+.pallet-box-3{
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: space-around;
+    @color3: #adjacentColors.rightColors[@color3];
+    .background-linear-gradient-saturate-desaturate(@color3);
+    
+}
+
+.rightColors{
+    width:           100%;
+    height:          15%;
+    display:         flex;
+    justify-content: space-around;
+    
+    .pallet-box-3-shade-1{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color1];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate1];
+        }
+        
+    }
+    
+    .pallet-box-3-shade-2{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate2];
+        }
+        
+    }
+    
+    .pallet-box-3-shade-3{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color3];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate3];
+        }
+        
+    }
+    
+    .pallet-box-3-shade-4{
+          width:  100%;
+          margin: 0 2.5px;
+          display: flex;
+          .desaturate{
+              width: 100%;
+              height: 100%;
+              background-color: #adjacentColors.rightColors[@desaturate4];
+          }
+          .color {
+              width: 100%;
+              height: 100%;
+              background-color: #adjacentColors.rightColors[@color4];
+          }
+    
+          .saturate {
+              width: 100%;
+              height: 100%;
+              background-color: #adjacentColors.rightColors[@saturate4];
+          }
+    
+      }
+    .pallet-box-3-shade-5{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color5];
+        }
+        
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate5];
+        }
+        
+    }
+}
+
+.pallet-box-4{
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: space-around;
+    @color3: #complementaryColors[@color3];
+    .background-linear-gradient-saturate-desaturate(@color3);
+    
+}
+
+.complementaryColors-boxPallet{
+    width:           100%;
+    height:          15%;
+    display:         flex;
+    justify-content: space-around;
+    
+    .pallet-box-4-shade-1{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color1];
+        }
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate1];
+        }
+        
+    }
+    
+    .pallet-box-4-shade-2{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate2];
+        }
+        
+    }
+    
+    .pallet-box-4-shade-3{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color3];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate3];
+        }
+        
+    }
+    
+    .pallet-box-4-shade-4{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate4];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color4];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate4];
+        }
+        
+    }
+    
+    .pallet-box-4-shade-5{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color5];
+        }
+        
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate5];
+        }
+        
+    }
+}
+
+.border{
+    border: 2px solid #e8f6ff26;
+}
+
+.pallet-box-heading{
+    display:         flex;
+    justify-content: space-around;
+}
+
+.triad-box{
+    display:   flex;
+    flex-wrap: wrap;
+    margin:    7rem auto 0 auto;
+    width:     70vw;
+    height:    70vh;
+    .border();
+    
+    h2{
+        font-size: 1rem;
+    }
+    
+    
+    .leftColors{
+        
+        .pallet-box-2-shade-1{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate1];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color1];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-2{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate2];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color2];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-3{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate3];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color3];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-4{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate4];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color4];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate4];
+            }
+            
+        }
+        .pallet-box-2-shade-5{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate5];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color5];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate5];
+            }
+            
+        }
+    }
+    
+    .pallet-box-2{
+        @color3: #triadColors.leftTriad[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .pallet-box-3{
+        @color3: #triadColors.rightTriad[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .rightColors{
+        justify-content: space-around;
+        
+        .pallet-box-3-shade-1{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate1];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color1];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-2{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate2];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color2];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-3{
+            width:  100%;
+            margin: 0 2.5px;
+            display: flex;
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate3];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color3];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-4{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate4];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color4];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate4];
+            }
+            
+        }
+        .pallet-box-3-shade-5{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate5];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color5];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate5];
+            }
+            
+        }
+    }
+    
+    .pallet-box-4{
+        @color3: #complementaryColors[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+}
+
+.tetrad-box{
+    display:   flex;
+    flex-wrap: wrap;
+    margin:    7rem auto 0 auto;
+    width:     70vw;
+    height:    70vh;
+    .border();
+    
+    h2{
+        font-size: 1rem;
+    }
+    
+    .leftColors{
+        
+        .pallet-box-2-shade-1{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate1];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color1];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-2{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate2];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color2];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-3{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate3];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color3];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-4{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate4];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color4];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate4];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-5{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate5];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color5];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate5];
+            }
+            
+        }
+    }
+    
+    .pallet-box-2{
+        @color3: #tetradColors.left30[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .pallet-box-3{
+        @color3: #tetradColors.left30Complementary[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .rightColors{
+        justify-content: space-around;
+        
+        .pallet-box-3-shade-1{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate1];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color1];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-2{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate2];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color2];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-3{
+            width:   100%;
+            margin:  0 2.5px;
+            display: flex;
+            
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate3];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color3];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-4{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate4];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color4];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate4];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-5{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate5];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color5];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate5];
+            }
+            
+        }
+    }
+    
+}
+    
+    body{
+    background-image: linear-gradient(to bottom right, #primaryColors[@color3], #adjacentColors.rightColors[@color3]);
+}

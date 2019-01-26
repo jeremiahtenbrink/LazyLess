@@ -44,7 +44,7 @@
 
 }
 
-.aesthetic-box-shadow (@color: black, @blur: 20px, @width: 2px,  @opacity: .5, @x-offset: @default-box-shadow-offsetX,
+.aesthetic-box-shadow (@color: black, @blur: @default-box-shadow-blur, @width: @default-box-shadow-width,  @opacity: .5, @x-offset: @default-box-shadow-offsetX,
 @y-offset: @default-box-shadow-offsetY) {
   box-shadow+: @x-offset @y-offset @blur @width rgba(@color, @opacity);
 
