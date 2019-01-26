@@ -28,7 +28,7 @@
       <envs />
     </TaskOptions>
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="test.less testCSS.css --source-map" />
+      <option name="arguments" value="boxPallet.less boxPallet.css --source-map" />
       <option name="checkSyntaxErrors" value="false" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />

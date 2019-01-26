@@ -36,6 +36,10 @@ Then in your css use the animations by calling the mixins.
   
 }
 ```
+
+We now include a color scheme mixin for project. If you want to include the auto color schema into your project
+just add 
+
 I have separated the mixins into 6 main categories so its easy to find the animation you are looking for via intellisense. 
 
 #### .entrance-MIXIN-NAME
