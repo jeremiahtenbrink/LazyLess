@@ -1210,6 +1210,374 @@
     justify-content: space-around;
 }
 
-body{
+.triad-box{
+    display:   flex;
+    flex-wrap: wrap;
+    margin:    7rem auto 0 auto;
+    width:     70vw;
+    height:    70vh;
+    .border();
+    
+    h2{
+        font-size: 1rem;
+    }
+    
+    
+    .leftColors{
+        
+        .pallet-box-2-shade-1{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate1];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color1];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-2{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate2];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color2];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-3{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate3];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color3];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-4{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate4];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color4];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate4];
+            }
+            
+        }
+        .pallet-box-2-shade-5{
+            .desaturate{
+                background-color: #triadColors.leftTriad[@desaturate5];
+            }
+            .color {
+                background-color: #triadColors.leftTriad[@color5];
+            }
+            
+            .saturate {
+                background-color: #triadColors.leftTriad[@saturate5];
+            }
+            
+        }
+    }
+    
+    .pallet-box-2{
+        @color3: #triadColors.leftTriad[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .pallet-box-3{
+        @color3: #triadColors.rightTriad[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .rightColors{
+        justify-content: space-around;
+        
+        .pallet-box-3-shade-1{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate1];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color1];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-2{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate2];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color2];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-3{
+            width:  100%;
+            margin: 0 2.5px;
+            display: flex;
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate3];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color3];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-4{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate4];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color4];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate4];
+            }
+            
+        }
+        .pallet-box-3-shade-5{
+            .desaturate{
+                background-color: #triadColors.rightTriad[@desaturate5];
+            }
+            .color {
+                background-color: #triadColors.rightTriad[@color5];
+            }
+            
+            .saturate {
+                background-color: #triadColors.rightTriad[@saturate5];
+            }
+            
+        }
+    }
+    
+    .pallet-box-4{
+        @color3: #complementaryColors[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+}
+
+.tetrad-box{
+    display:   flex;
+    flex-wrap: wrap;
+    margin:    7rem auto 0 auto;
+    width:     70vw;
+    height:    70vh;
+    .border();
+    
+    h2{
+        font-size: 1rem;
+    }
+    
+    .leftColors{
+        
+        .pallet-box-2-shade-1{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate1];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color1];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-2{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate2];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color2];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-3{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate3];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color3];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-4{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate4];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color4];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate4];
+            }
+            
+        }
+        
+        .pallet-box-2-shade-5{
+            .desaturate{
+                background-color: #tetradColors.left30[@desaturate5];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30[@color5];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30[@saturate5];
+            }
+            
+        }
+    }
+    
+    .pallet-box-2{
+        @color3: #tetradColors.left30[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .pallet-box-3{
+        @color3: #tetradColors.left30Complementary[@color3];
+        .background-linear-gradient-saturate-desaturate(@color3);
+        
+    }
+    
+    .rightColors{
+        justify-content: space-around;
+        
+        .pallet-box-3-shade-1{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate1];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color1];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate1];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-2{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate2];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color2];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate2];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-3{
+            width:   100%;
+            margin:  0 2.5px;
+            display: flex;
+            
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate3];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color3];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate3];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-4{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate4];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color4];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate4];
+            }
+            
+        }
+        
+        .pallet-box-3-shade-5{
+            .desaturate{
+                background-color: #tetradColors.left30Complementary[@desaturate5];
+            }
+            
+            .color{
+                background-color: #tetradColors.left30Complementary[@color5];
+            }
+            
+            .saturate{
+                background-color: #tetradColors.left30Complementary[@saturate5];
+            }
+            
+        }
+    }
+    
+}
+    
+    body{
     background-image: linear-gradient(to bottom right, #primaryColors[@color3], #adjacentColors.rightColors[@color3]);
 }
