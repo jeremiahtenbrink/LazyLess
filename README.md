@@ -38,7 +38,45 @@ Then in your css use the animations by calling the mixins.
 ```
 
 We now include a color scheme mixin for project. If you want to include the auto color schema into your project
-just add 
+just add @import 'sources/color_pallet' to your imports. Then you use it like so. Just change the @color variable 
+to the color of your choosing and the color scheme mixin will auto pick the other colors based on the spin 
+of the color you choose. 
+
+```css
+
+body {
+    background-color: #primaryColors[@color3];
+    color: #complementaryColors[@saturate2];
+    border: 1px solid #adjacentColors.leftColors[@desaturate4];
+    
+}
+```
+
+First you call the namespace of the colors you want to use. 
+```css
+#primaryColors
+#adjacentColors
+#triadColors
+#tetradColors
+#complementaryColors
+```
+Followed by calling the colors mixin if it has one. The three that have a mixin for them is the #adjacentColors, #triadColors
+ ,and #tetradColors. 
+ 
+ ```css
+#adjacentColors.leftAdjacent
+#adjacentColors.rightAdjacent
+#triadColors.leftTriad
+#triadColors.rightTriad
+#tetradColors.leftTetrad
+#tetradColors.leftTetradComplementary
+
+```
+
+Each one of the namespace colors and each one of the namespace.mixin colors include the @color1 through @color5.
+They also come with the desaturated and saturated equal colors called @saturate1 through @saturate5, @desaturate1 through 
+@desaturate5. 
+
 
 I have separated the mixins into 6 main categories so its easy to find the animation you are looking for via intellisense. 
 

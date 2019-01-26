@@ -52,12 +52,12 @@
 }
 
 #adjacentColors{
-    .leftColors{
-        .colors(spin(@color, 30deg))
+    .leftAdjacent{
+        .colors(spin(@color, -30deg))
     }
     
-    .rightColors{
-        .colors(spin(@color, -30deg));
+    .rightAdjacent{
+        .colors(spin(@color, 30deg));
     }
 }
 
@@ -72,11 +72,11 @@
 }
 
 #tetradColors{
-    .left30{
+    .leftTetrad{
         .colors(spin(@color, -30deg));
     }
     
-    .left30Complementary{
+    .leftTetradComplementary{
         .colors(spin(@color, 150deg));
     }
 }
@@ -95,13 +95,3 @@
 @grey5Saturate: saturate(@grey5, 10%);
 @grey6Saturate: saturate(@grey6, 10%);
 @grey7Saturate: saturate(@grey7, 10%);
-
-
-
-@mix1: mix(@color, spin(@color, 80));
-@mix2: mix(@color, spin(@color, 70));
-@mix3: mix(@color, spin(@color, 60));
-@mix4: mix(@color, spin(@color, 50));
-@mix5: mix(@color, spin(@color, 90));
-@mix6: mix(@color, spin(@color, 100));
-@mix7: mix(@color, spin(@color, 110));
