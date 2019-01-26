@@ -1,8 +1,10 @@
+@import 'less-animate';
+
 @lighten-percentage-distance: 15%;
 @darken-percentage-distance: 15%;
 @saturation-percentage: 20%;
 @desaturate-percentage: 20%;
-@color:  hsl(180.28037383, 79.77653631%, 65.09803922%);
+@color: hsl(180.28037383, 79.77653631%, 65.09803922%);
 
 .colors(@color){
     
@@ -21,7 +23,7 @@
         .saturate(){
             @saturate1: saturate(hsl(@color1), @saturation-percentage);
             @saturate2: saturate(@color2, @saturation-percentage);
-            @saturate3: saturate(@color3, @saturation-percentage);
+            @saturate3: saturate(@color, @saturation-percentage);
             @saturate4: saturate(@color4, @saturation-percentage);
             @saturate5: saturate(@color5, @saturation-percentage);
         }
@@ -31,7 +33,7 @@
         .desaturate(){
             @desaturate1: desaturate(hsl(@color1), @desaturate-percentage);
             @desaturate2: desaturate(@color2, @desaturate-percentage);
-            @desaturate3: desaturate(@color3, @desaturate-percentage);
+            @desaturate3: desaturate(@color, @desaturate-percentage);
             @desaturate4: desaturate(@color4, @desaturate-percentage);
             @desaturate5: desaturate(@color5, @desaturate-percentage);
         }
@@ -82,7 +84,7 @@
 }
 
 .body{
-    background-color: #primaryColors[@color3];
+    background-color: #primaryColors[@desaturate3];
     color:            #complementaryColors[@color3];
     border:           #adjacentColors.leftColors[@color3];
 }
@@ -658,413 +660,556 @@
 }
 
 .main-box{
-    display: flex;
+    display:   flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    width: 70vw;
-    height: 70vh;
-    border: 1px solid black;
-    background-color: #primaryColors[@color3];
+    margin:    0 auto;
+    width:     70vw;
+    height:    70vh;
+    .border();
     
-    h2 {
+    h2{
         font-size: 1rem;
     }
 }
 
+@primary3: #primaryColors[@color3];
 .pallet-box-1{
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
     justify-content: space-around;
-    transition: all .4s;
+    transition:      all .4s;
+    .background-linear-gradient-saturate-desaturate(@primary3);
     
 }
 
 .primaryColors-boxpallet{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-bottom: 1rem;
+    width:           100%;
+    height:          15%;
+    display:         flex;
     justify-content: space-around;
     
     .pallet-box-1-shade-1{
-        width: 10%;
-        background-color: #primaryColors[@color1];
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate1];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate1];
+        }
         
     }
+    
     .pallet-box-1-shade-2{
-        width: 10%;
-        background-color: #primaryColors[@color2];
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate2];
+        }
         
     }
     
     .pallet-box-1-shade-3{
-        width: 10%;
-        background-color: #primaryColors[@color4];
-        
-    }
-    .pallet-box-1-shade-4{
-        width: 10%;
-        background-color: #primaryColors[@color5];
-        
-    }
-}
-
-.primaryColors-boxpalletSaturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-bottom: 1rem;
-    justify-content: space-around;
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate3];
+        }
     
-    .pallet-box-1-shade-1{
-        width: 10%;
-        background-color: #primaryColors[@saturate1];
-        
-    }
-    .pallet-box-1-shade-2{
-        width: 10%;
-        background-color: #primaryColors[@saturate2];
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate3];
+        }
         
     }
     
-    .pallet-box-1-shade-3{
-        width: 10%;
-        background-color: #primaryColors[@saturate4];
-        
-    }
     .pallet-box-1-shade-4{
-        width: 10%;
-        background-color: #primaryColors[@saturate5];
-        
-    }
-}
-
-.primaryColors-boxpalletDesaturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-bottom: 1rem;
-    justify-content: space-around;
-    .pallet-box-1-shade-1{
-        width: 10%;
-        background-color: #primaryColors[@desaturate1];
-        
-    }
-    .pallet-box-1-shade-2{
-        width: 10%;
-        background-color: #primaryColors[@desaturate2];
-        
-    }
+         width: 100%;
+         margin: 0 2.5px;
+         display: flex;
+         .desaturate{
+             width: 100%;
+             height: 100%;
+             background-color: #primaryColors[@color4];
+         }
+         .color {
+             width: 100%;
+             height: 100%;
+             background-color: #primaryColors[@saturate4];
+         }
     
-    .pallet-box-1-shade-3{
-        width: 10%;
-        background-color: #primaryColors[@desaturate4];
+         .saturate {
+             width: 100%;
+             height: 100%;
+             background-color: #primaryColors[@desaturate4];
+         }
+    
+     }
+    
+    .pallet-box-1-shade-5{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@color5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@saturate5];
+        }
         
-    }
-    .pallet-box-1-shade-4{
-        width: 10%;
-        background-color: #primaryColors[@desaturate5];
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #primaryColors[@desaturate5];
+        }
         
     }
 }
 
 .leftColors{
-     width: 100%;
-     height: 10%;
-     display: flex;
-     margin-bottom: 1rem;
-     justify-content: space-around;
-     .pallet-box-2-shade-1{
-         width: 10%;
-         background-color: #adjacentColors.leftColors[@color1];
-        
-     }
-     .pallet-box-2-shade-2{
-         width: 10%;
-         background-color: #adjacentColors.leftColors[@color2];
-        
-     }
+    width:           100%;
+    height:          15%;
+    display:         flex;
     
-     .pallet-box-2-shade-3{
-         width: 10%;
-         background-color: #adjacentColors.leftColors[@color4];
-        
-     }
-     .pallet-box-2-shade-4{
-         width: 10%;
-         background-color: #adjacentColors.leftColors[@color5];
-        
-     }
- }
-
-.leftColors-saturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-bottom: 1rem;
-    justify-content: space-around;
     .pallet-box-2-shade-1{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@saturate1];
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color1];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate1];
+        }
         
     }
+    
     .pallet-box-2-shade-2{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@saturate2];
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate2];
+        }
         
     }
     
     .pallet-box-2-shade-3{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@saturate4];
-        
-    }
-    .pallet-box-2-shade-4{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@saturate5];
-        
-    }
-}
-
-.leftColors-desaturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-bottom: 1rem;
-    justify-content: space-around;
-    .pallet-box-2-shade-1{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@desaturate1];
-        
-    }
-    .pallet-box-2-shade-2{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@desaturate2];
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color3];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate3];
+        }
         
     }
     
-    .pallet-box-2-shade-3{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@desaturate4];
+    .pallet-box-2-shade-4{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate4];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color4];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate4];
+        }
         
     }
-    .pallet-box-2-shade-4{
-        width: 10%;
-        background-color: #adjacentColors.leftColors[@desaturate5];
+    .pallet-box-2-shade-5{
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@desaturate5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@color5];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.leftColors[@saturate5];
+        }
         
     }
 }
 
 .pallet-box-2{
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    background-color: #adjacentColors.leftColors[@color3];
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
+    @color3: #adjacentColors.leftColors[@color3];
+    .background-linear-gradient-saturate-desaturate(@color3);
     justify-content: space-around;
     
-
 }
 
 .pallet-box-3{
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
     justify-content: space-around;
-    background-color: #adjacentColors.rightColors[@color3];
+    @color3: #adjacentColors.rightColors[@color3];
+    .background-linear-gradient-saturate-desaturate(@color3);
     
 }
 
 .rightColors{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-top: 1rem;
+    width:           100%;
+    height:          15%;
+    display:         flex;
     justify-content: space-around;
+    
     .pallet-box-3-shade-1{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@color1];
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color1];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate1];
+        }
         
     }
+    
     .pallet-box-3-shade-2{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@color2];
+        width: 100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate2];
+        }
         
     }
     
     .pallet-box-3-shade-3{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@color4];
-        
-    }
-    .pallet-box-3-shade-4{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@color5];
-        
-    }
-}
-
-.rightColors-saturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-top: 1rem;
-    justify-content: space-around;
-    .pallet-box-3-shade-1{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@saturate1];
-        
-    }
-    .pallet-box-3-shade-2{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@saturate2];
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color3];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate3];
+        }
         
     }
     
-    .pallet-box-3-shade-3{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@saturate4];
-        
-    }
     .pallet-box-3-shade-4{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@saturate5];
-        
-    }
-}
-
-.rightColors-desaturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-top: 1rem;
-    justify-content: space-around;
-    .pallet-box-3-shade-1{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@desaturate1];
-        
-    }
-    .pallet-box-3-shade-2{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@desaturate2];
-        
-    }
+          width:  100%;
+          margin: 0 2.5px;
+          display: flex;
+          .desaturate{
+              width: 100%;
+              height: 100%;
+              background-color: #adjacentColors.rightColors[@desaturate4];
+          }
+          .color {
+              width: 100%;
+              height: 100%;
+              background-color: #adjacentColors.rightColors[@color4];
+          }
     
-    .pallet-box-3-shade-3{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@desaturate4];
+          .saturate {
+              width: 100%;
+              height: 100%;
+              background-color: #adjacentColors.rightColors[@saturate4];
+          }
+    
+      }
+    .pallet-box-3-shade-5{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@desaturate5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@color5];
+        }
         
-    }
-    .pallet-box-3-shade-4{
-        width: 10%;
-        background-color: #adjacentColors.rightColors[@desaturate5];
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #adjacentColors.rightColors[@saturate5];
+        }
         
     }
 }
 
 .pallet-box-4{
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
+    width:           50%;
+    height:          50%;
+    display:         flex;
+    flex-direction:  column;
     justify-content: space-around;
-    background-color: #complementaryColors[@color3];
-
+    @color3: #complementaryColors[@color3];
+    .background-linear-gradient-saturate-desaturate(@color3);
+    
 }
 
 .complementaryColors-boxPallet{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-top: 1rem;
+    width:           100%;
+    height:          15%;
+    display:         flex;
     justify-content: space-around;
+    
     .pallet-box-4-shade-1{
-        width: 10%;
-        background-color: #complementaryColors[@color1];
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate1];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color1];
+        }
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate1];
+        }
         
     }
+    
     .pallet-box-4-shade-2{
-        width: 10%;
-        background-color: #complementaryColors[@color2];
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate2];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color2];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate2];
+        }
         
     }
     
     .pallet-box-4-shade-3{
-        width: 10%;
-        background-color: #complementaryColors[@color4];
-        
-    }
-    .pallet-box-4-shade-4{
-        width: 10%;
-        background-color: #complementaryColors[@color5];
-        
-    }
-}
-
-.complementaryColors-boxPallet-saturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-top: 1rem;
-    justify-content: space-around;
-    .pallet-box-4-shade-1{
-        width: 10%;
-        background-color: #complementaryColors[@saturate1];
-        
-    }
-    .pallet-box-4-shade-2{
-        width: 10%;
-        background-color: #complementaryColors[@saturate2];
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate3];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color3];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate3];
+        }
         
     }
     
-    .pallet-box-4-shade-3{
-        width: 10%;
-        background-color: #complementaryColors[@saturate4];
-        
-    }
     .pallet-box-4-shade-4{
-        width: 10%;
-        background-color: #complementaryColors[@saturate5];
-        
-    }
-}
-
-.complementaryColors-boxPallet-desaturated{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-top: 1rem;
-    justify-content: space-around;
-    .pallet-box-4-shade-1{
-        width: 10%;
-        background-color: #complementaryColors[@color1];
-        
-    }
-    .pallet-box-4-shade-2{
-        width: 10%;
-        background-color: #complementaryColors[@color2];
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate4];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color4];
+        }
+    
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate4];
+        }
         
     }
     
-    .pallet-box-4-shade-3{
-        width: 10%;
-        background-color: #complementaryColors[@color4];
+    .pallet-box-4-shade-5{
+        width:  100%;
+        margin: 0 2.5px;
+        display: flex;
+        .desaturate{
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@desaturate5];
+        }
+        .color {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@color5];
+        }
         
-    }
-    .pallet-box-4-shade-4{
-        width: 10%;
-        background-color: #complementaryColors[@color5];
+        .saturate {
+            width: 100%;
+            height: 100%;
+            background-color: #complementaryColors[@saturate5];
+        }
         
     }
 }
 
-.border {
+.border{
     border: 2px solid #e8f6ff26;
 }
-body {
+
+.pallet-box-heading{
+    display:         flex;
+    justify-content: space-around;
+}
+
+body{
     background-image: linear-gradient(to bottom right, #primaryColors[@color3], #adjacentColors.rightColors[@color3]);
 }

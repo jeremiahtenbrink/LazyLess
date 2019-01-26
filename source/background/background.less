@@ -300,6 +300,10 @@
     background-image+: linear-gradient(to bottom right, @color1, @color2);
 }
 
+.background-linear-gradient-saturate-desaturate(@color){
+    background-image+: linear-gradient(to  right, desaturate(@color, @desaturate-percentage) 0%, desaturate(@color, @desaturate-percentage) 33%, @color 33%,@color 66%, saturate(@color, @saturation-percentage) 66%, saturate(@color, @saturation-percentage) 100%);
+}
+
 .background-linear-gradient-glow-on-hover (@color1, @color2, @glowPercentage: 25%){
     .background-linear-gradient(@color1, @color2);
     
